@@ -7,3 +7,13 @@
 \\server-bc\users$\xuanduong.ho\visual studio 2017\Projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.Cache
 \\server-bc\users$\xuanduong.ho\visual studio 2017\Projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 \\server-bc\users$\xuanduong.ho\visual studio 2017\Projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\XuanDuong.Ho\Desktop\Git hello world\hello-world\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\XuanDuong.Ho\Desktop\Git hello world\hello-world\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\XuanDuong.Ho\Desktop\Git hello world\hello-world\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\XuanDuong.Ho\Desktop\Git hello world\hello-world\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojResolveAssemblyReference.cache
+C:\Users\XuanDuong.Ho\Desktop\Git hello world\hello-world\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\XuanDuong.Ho\Desktop\Git hello world\hello-world\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\XuanDuong.Ho\Desktop\Git hello world\hello-world\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Main.resources
+C:\Users\XuanDuong.Ho\Desktop\Git hello world\hello-world\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.Cache
+C:\Users\XuanDuong.Ho\Desktop\Git hello world\hello-world\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\XuanDuong.Ho\Desktop\Git hello world\hello-world\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb

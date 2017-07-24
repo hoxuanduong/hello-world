@@ -17,5 +17,16 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+        private void quảnLýChiTiêuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form1 qlct = new Form1();
+            qlct.Show();
+        }
+
+        private void btQlct_Click(object sender, EventArgs e)
+        {
+            Form1 qlct = new Form1();
+            qlct.Show();
+        }
     }
 }

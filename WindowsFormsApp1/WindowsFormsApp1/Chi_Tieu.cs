@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Text.RegularExpressions;
+using System.Data.Sql;
+using System.Data.SqlClient;
+using System.Configuration;
 
 namespace WindowsFormsApp1
 {
@@ -159,6 +162,61 @@ namespace WindowsFormsApp1
                         
                     }
 
+            }
+        }
+
+        private void cbXtc_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbXtc.Checked)
+            {
+                cbT.Enabled = false;
+                cbN.Enabled = false;
+            }
+            else
+            {
+                cbT.Enabled = true;
+                cbN.Enabled = true;
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // TODO: Diese Codezeile lädt Daten in die Tabelle "testdbDataSet4.TestTable". Sie können sie bei Bedarf verschieben oder entfernen.
+            this.testTableTableAdapter.Fill(this.testdbDataSet4.TestTable);
+
+        }
+
+        private void btSdb_Click(object sender, EventArgs e)
+        {
+            const string str = "Data Source=BIB-LHOX\\CONEXIO;Initial Catalog=Testdb;Integrated Security=True";
+
+            using (SqlConnection connect = new SqlConnection(str))
+            {
+                using (SqlCommand command = new SqlCommand())
+                {
+                    command.Connection = connect;
+                    command.CommandText = "insert into TestTable(Date, Product, Manufacturer, Place, Price) values(@Date, @Product, @Manufacturer, @Place, @Price)";
+
+                    command.Parameters.Add(new SqlParameter("@Date", SqlDbType.VarChar));
+                    command.Parameters.Add(new SqlParameter("@Product", SqlDbType.VarChar));
+                    command.Parameters.Add(new SqlParameter("@Manufacturer", SqlDbType.VarChar));
+                    command.Parameters.Add(new SqlParameter("@Place", SqlDbType.VarChar));
+                    command.Parameters.Add(new SqlParameter("@Price", SqlDbType.Real));
+                    connect.Open();
+                    foreach (DataGridViewRow row in dataGridView1.Rows)
+                    {
+                        if (!row.IsNewRow)
+                        {
+                            command.Parameters["@Date"].Value = row.Cells[0].Value;
+                            command.Parameters["@Product"].Value = row.Cells[1].Value;
+                            command.Parameters["@Manufacturer"].Value = row.Cells[2].Value;
+                            command.Parameters["@Place"].Value = row.Cells[3].Value;
+                            command.Parameters["@Price"].Value = row.Cells[4].Value;
+
+                            command.ExecuteNonQuery();
+                        }
+                    }
+                }
             }
         }
     }
