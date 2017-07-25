@@ -37,17 +37,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btXoa = new System.Windows.Forms.Button();
             this.tbNM = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.btMF = new System.Windows.Forms.Button();
-            this.btLF = new System.Windows.Forms.Button();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
@@ -58,19 +50,21 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btSdb = new System.Windows.Forms.Button();
-            this.testdbDataSet4 = new WindowsFormsApp1.TestdbDataSet4();
-            this.testTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.testTableTableAdapter = new WindowsFormsApp1.TestdbDataSet4TableAdapters.TestTableTableAdapter();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.manufacturerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.placeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.testTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.testdbDataSet4 = new WindowsFormsApp1.TestdbDataSet4();
+            this.btSdb = new System.Windows.Forms.Button();
+            this.testTableTableAdapter = new WindowsFormsApp1.TestdbDataSet4TableAdapters.TestTableTableAdapter();
+            this.btUd = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nupG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.testdbDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.testTableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testdbDataSet4)).BeginInit();
             this.SuspendLayout();
             // 
             // openFileDialog1
@@ -155,48 +149,6 @@
             this.label3.TabIndex = 13;
             this.label3.Text = "Giá:";
             // 
-            // listView1
-            // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5});
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(50, 195);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(900, 200);
-            this.listView1.TabIndex = 7;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Ngày Mua";
-            this.columnHeader1.Width = 100;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Tên Hàng";
-            this.columnHeader2.Width = 89;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Hãng Sản Xuất";
-            this.columnHeader3.Width = 100;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Nơi Mua";
-            this.columnHeader4.Width = 78;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Giá";
-            this.columnHeader5.Width = 103;
-            // 
             // btXoa
             // 
             this.btXoa.Location = new System.Drawing.Point(800, 115);
@@ -222,26 +174,6 @@
             this.label4.Size = new System.Drawing.Size(50, 13);
             this.label4.TabIndex = 12;
             this.label4.Text = "Nơi Mua:";
-            // 
-            // btMF
-            // 
-            this.btMF.Location = new System.Drawing.Point(760, 421);
-            this.btMF.Name = "btMF";
-            this.btMF.Size = new System.Drawing.Size(75, 23);
-            this.btMF.TabIndex = 8;
-            this.btMF.Text = "Mở Từ File";
-            this.btMF.UseVisualStyleBackColor = true;
-            this.btMF.Click += new System.EventHandler(this.btMF_Click);
-            // 
-            // btLF
-            // 
-            this.btLF.Location = new System.Drawing.Point(875, 421);
-            this.btLF.Name = "btLF";
-            this.btLF.Size = new System.Drawing.Size(75, 23);
-            this.btLF.TabIndex = 9;
-            this.btLF.Text = "Lưu Vào File";
-            this.btLF.UseVisualStyleBackColor = true;
-            this.btLF.Click += new System.EventHandler(this.btLF_Click);
             // 
             // notifyIcon1
             // 
@@ -344,34 +276,11 @@
             this.placeDataGridViewTextBoxColumn,
             this.priceDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.testTableBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(50, 469);
+            this.dataGridView1.Location = new System.Drawing.Point(50, 181);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(900, 250);
+            this.dataGridView1.RowHeadersWidth = 50;
+            this.dataGridView1.Size = new System.Drawing.Size(900, 525);
             this.dataGridView1.TabIndex = 20;
-            // 
-            // btSdb
-            // 
-            this.btSdb.Location = new System.Drawing.Point(875, 726);
-            this.btSdb.Name = "btSdb";
-            this.btSdb.Size = new System.Drawing.Size(75, 23);
-            this.btSdb.TabIndex = 21;
-            this.btSdb.Text = "Lưu Vào DB";
-            this.btSdb.UseVisualStyleBackColor = true;
-            this.btSdb.Click += new System.EventHandler(this.btSdb_Click);
-            // 
-            // testdbDataSet4
-            // 
-            this.testdbDataSet4.DataSetName = "TestdbDataSet4";
-            this.testdbDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // testTableBindingSource
-            // 
-            this.testTableBindingSource.DataMember = "TestTable";
-            this.testTableBindingSource.DataSource = this.testdbDataSet4;
-            // 
-            // testTableTableAdapter
-            // 
-            this.testTableTableAdapter.ClearBeforeFill = true;
             // 
             // dateDataGridViewTextBoxColumn
             // 
@@ -403,11 +312,57 @@
             this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
             this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
             // 
+            // testTableBindingSource
+            // 
+            this.testTableBindingSource.DataMember = "TestTable";
+            this.testTableBindingSource.DataSource = this.testdbDataSet4;
+            // 
+            // testdbDataSet4
+            // 
+            this.testdbDataSet4.DataSetName = "TestdbDataSet4";
+            this.testdbDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // btSdb
+            // 
+            this.btSdb.Location = new System.Drawing.Point(875, 726);
+            this.btSdb.Name = "btSdb";
+            this.btSdb.Size = new System.Drawing.Size(75, 23);
+            this.btSdb.TabIndex = 21;
+            this.btSdb.Text = "Lưu Vào DB";
+            this.btSdb.UseVisualStyleBackColor = true;
+            this.btSdb.Click += new System.EventHandler(this.btSdb_Click);
+            // 
+            // testTableTableAdapter
+            // 
+            this.testTableTableAdapter.ClearBeforeFill = true;
+            // 
+            // btUd
+            // 
+            this.btUd.Location = new System.Drawing.Point(760, 726);
+            this.btUd.Name = "btUd";
+            this.btUd.Size = new System.Drawing.Size(75, 23);
+            this.btUd.TabIndex = 22;
+            this.btUd.Text = "Lấy Từ DB";
+            this.btUd.UseVisualStyleBackColor = true;
+            this.btUd.Click += new System.EventHandler(this.btUd_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(627, 726);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 761);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btUd);
             this.Controls.Add(this.btSdb);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label7);
@@ -417,12 +372,9 @@
             this.Controls.Add(this.cbXtc);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.btLF);
-            this.Controls.Add(this.btMF);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tbNM);
             this.Controls.Add(this.btXoa);
-            this.Controls.Add(this.listView1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -435,8 +387,8 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nupG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.testdbDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.testTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testdbDataSet4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -451,20 +403,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.Button btXoa;
         private System.Windows.Forms.TextBox tbNM;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btMF;
-        private System.Windows.Forms.Button btLF;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.CheckBox cbXtc;
         private System.Windows.Forms.ComboBox cbT;
@@ -481,6 +425,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn manufacturerDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn placeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btUd;
+        private System.Windows.Forms.Button button1;
     }
 }
 

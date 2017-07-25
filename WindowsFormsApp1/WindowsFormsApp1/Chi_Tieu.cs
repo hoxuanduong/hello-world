@@ -17,6 +17,9 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
+
+        private const string str = "Data Source=BIB-LHOX\\CONEXIO;Initial Catalog=Testdb;Integrated Security=True";
+
         public Form1()
         {
             InitializeComponent();
@@ -39,21 +42,13 @@ namespace WindowsFormsApp1
             }
             else
             {
-                ListViewItem item = new ListViewItem(dateTimePicker1.Text);
-                item.SubItems.Add(tbTH.Text);
-                item.SubItems.Add(tbHSX.Text);
-                item.SubItems.Add(tbNM.Text);
-                item.SubItems.Add(nupG.Value.ToString());
-                listView1.Items.Add(item);
+
             }
         }
 
         private void btXoa_Click(object sender, EventArgs e)
         {
-            foreach(ListViewItem item in listView1.SelectedItems)
-            {
-                listView1.Items.Remove(item);
-            }
+
         }
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
@@ -64,105 +59,6 @@ namespace WindowsFormsApp1
         private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
 
-        }
-
-        private void btMF_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            openFileDialog1.Title = "Open csv File";
-            openFileDialog1.Filter = "CSV files|*.csv";
-            openFileDialog1.InitialDirectory = @"C:\";
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                //temporary listview lvtempo to keep items read form file
-                //copy to listview1 only if file read is successfull
-
-                ListView lvtempo = new ListView();
-
-                char[] delimiter = { ';' };
-                StreamReader sr = new StreamReader(openFileDialog1.FileName);
-
-                lvtempo.Columns.Add(listView1.Columns[0].Name);
-                lvtempo.Columns.Add(listView1.Columns[1].Name);
-                lvtempo.Columns.Add(listView1.Columns[2].Name);
-                lvtempo.Columns.Add(listView1.Columns[3].Name);
-                lvtempo.Columns.Add(listView1.Columns[4].Name);
-                //read first line from file
-                string line = sr.ReadLine();    
-
-                while (line != null)
-                {
-                    string[] elements = line.Split(delimiter);
-                    
-                    try
-                    {
-                        ListViewItem lvi = new ListViewItem(elements[0]);
-                        lvi.SubItems.Add(elements[1]);
-                        lvi.SubItems.Add(elements[2]);
-                        lvi.SubItems.Add(elements[3]);
-                        lvi.SubItems.Add(elements[4]);
-                        lvtempo.Items.Add(lvi);
-                    }
-                    catch (System.IndexOutOfRangeException)
-                    {
-                        MessageBox.Show("file format không đúng", "Lỗi đọc file", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        sr.Close();
-                        return;
-                    }
-         
-                    line = sr.ReadLine();
-
-                }
-
-                sr.Close();
-
-                //delete all items of listview 1 but not listview (columns wont't be deleted)
-                //to delete listview use listview1.Clear();
-                listView1.Items.Clear();
-
-                foreach (ListViewItem item in lvtempo.Items)
-                {
-                    listView1.Items.Add((ListViewItem)item.Clone());
-                }
-            }
-        }
-
-        private void btLF_Click(object sender, EventArgs e)
-        {
-            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-            saveFileDialog1.Title = "Lưu dữ liệu vào file csv";
-            saveFileDialog1.Filter = "CSV files|*.csv";
-            saveFileDialog1.InitialDirectory = @"C:\";
-            if(saveFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-
-                    using (StreamWriter sw = new StreamWriter(saveFileDialog1.FileName))
-                    {
-                        for (int i = 0; i < listView1.Items.Count; i++)
-                        {
-
-                            string line = "";
-                            int j = 0;
-
-                            for (j = 0; j < listView1.Items[i].SubItems.Count - 1; j++)
-                            {
-                                
-                                line += listView1.Items[i].SubItems[j].Text + ";";
-
-                            }
-
-                            line += listView1.Items[i].SubItems[j].Text;
-
-                            sw.WriteLine(line);
-
-                        }
-
-                        sw.Dispose();
-                        sw.Close();
-                        
-                    }
-
-            }
         }
 
         private void cbXtc_CheckedChanged(object sender, EventArgs e)
@@ -186,9 +82,11 @@ namespace WindowsFormsApp1
 
         }
 
+        //save data from datagridview to database
         private void btSdb_Click(object sender, EventArgs e)
         {
-            const string str = "Data Source=BIB-LHOX\\CONEXIO;Initial Catalog=Testdb;Integrated Security=True";
+
+            delete_table();
 
             using (SqlConnection connect = new SqlConnection(str))
             {
@@ -202,7 +100,16 @@ namespace WindowsFormsApp1
                     command.Parameters.Add(new SqlParameter("@Manufacturer", SqlDbType.VarChar));
                     command.Parameters.Add(new SqlParameter("@Place", SqlDbType.VarChar));
                     command.Parameters.Add(new SqlParameter("@Price", SqlDbType.Real));
-                    connect.Open();
+
+                    try
+                    {
+                        connect.Open();
+                    }
+                    catch (Exception exc)
+                    {
+                        Console.WriteLine(exc.ToString());
+                    }
+                    
                     foreach (DataGridViewRow row in dataGridView1.Rows)
                     {
                         if (!row.IsNewRow)
@@ -216,8 +123,115 @@ namespace WindowsFormsApp1
                             command.ExecuteNonQuery();
                         }
                     }
+
+                    try
+                    {
+                        connect.Close();
+                    }
+                    catch (Exception exc)
+                    {
+                        Console.WriteLine(exc.ToString());
+                    }
+
                 }
             }
+        }
+
+        private void delete_table()
+        {
+            using (SqlConnection connect = new SqlConnection(str))
+            {
+                using (SqlCommand command = new SqlCommand("Delete from TestTable", connect))
+                {
+                    try
+                    {
+                        connect.Open();
+
+                        command.ExecuteNonQuery();
+
+                        connect.Close();
+                    }
+                    catch(Exception e)
+                    {
+                        Console.WriteLine(e.ToString());
+                    }
+
+
+                }
+            }
+        }
+
+        //take data from database to listview
+        private void btUd_Click(object sender, EventArgs e)
+        {
+
+            using (SqlConnection connect = new SqlConnection(str))
+            {
+                using (SqlCommand command = new SqlCommand("select * from TestTable",connect))
+                {
+
+                    SqlDataReader myReader = null;
+
+                    //open connection to sql server
+                    try
+                    {
+                        connect.Open();
+                    }
+                    catch (Exception exc)
+                    {
+                        Console.WriteLine(exc.ToString());
+                    }
+
+                    try
+                    {
+
+                        //execute read command from database in sql server                
+                        myReader = command.ExecuteReader();
+
+                        // read each row from TestTable and write it into listView1
+                        while (myReader.Read())
+                        {
+
+                        //do something with data read
+
+                        }
+                    }
+                    catch (Exception exc)
+                    {
+                        Console.WriteLine(exc.ToString());
+                    }
+
+                    //close the reader 
+                    try
+                    {
+                        myReader.Close();
+                    }
+                    catch (Exception exc)
+                    {
+                        Console.WriteLine(exc.ToString());
+                    }
+
+                    //close the connection
+                    try
+                    {
+                        connect.Close();
+                    }
+                    catch (Exception exc)
+                    {
+                        Console.WriteLine(exc.ToString());
+                    }
+
+
+                }
+            }
+
+
+        }
+
+        //update from database to datagridview
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.testTableTableAdapter.Fill(this.testdbDataSet4.TestTable);
         }
     }
 }
