@@ -42,13 +42,51 @@ namespace WindowsFormsApp1
             }
             else
             {
-
+                insert_database();
+                update_datagridview();
             }
         }
 
         private void btXoa_Click(object sender, EventArgs e)
         {
 
+            if (this.dataGridView1.SelectedRows.Count > 0)
+            {
+
+                using (SqlConnection conn = new SqlConnection(str))
+                {
+                    using (SqlCommand cmd = new SqlCommand())
+                    {
+                        cmd.Connection = conn;
+                        cmd.CommandText = "Delete from TestTable where Product=@Product";
+                        cmd.Parameters.Add(new SqlParameter("@Product", SqlDbType.VarChar));
+
+                        try
+                        {
+                            conn.Open();
+                        }
+                        catch (Exception exc)
+                        {
+                            Console.WriteLine(exc.ToString());
+                        }
+                        cmd.Parameters["@Product"].Value = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+                        cmd.ExecuteNonQuery();
+
+                        try
+                        {
+                            conn.Close();
+                        }
+                        catch (Exception exc)
+                        {
+                            Console.WriteLine(exc.ToString());
+                        }
+                    }
+                }
+
+                dataGridView1.Rows.RemoveAt(this.dataGridView1.SelectedRows[0].Index);
+            }
+
+            
         }
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
@@ -82,62 +120,62 @@ namespace WindowsFormsApp1
 
         }
 
-        //save data from datagridview to database
-        private void btSdb_Click(object sender, EventArgs e)
-        {
+        //save data from datagridview to database - no more used
+        //private void btSdb_Click(object sender, EventArgs e)
+        //{
 
-            delete_table();
+        //    delete_database();
 
-            using (SqlConnection connect = new SqlConnection(str))
-            {
-                using (SqlCommand command = new SqlCommand())
-                {
-                    command.Connection = connect;
-                    command.CommandText = "insert into TestTable(Date, Product, Manufacturer, Place, Price) values(@Date, @Product, @Manufacturer, @Place, @Price)";
+        //    using (SqlConnection connect = new SqlConnection(str))
+        //    {
+        //        using (SqlCommand command = new SqlCommand())
+        //        {
+        //            command.Connection = connect;
+        //            command.CommandText = "insert into TestTable(Date, Product, Manufacturer, Place, Price) values(@Date, @Product, @Manufacturer, @Place, @Price)";
 
-                    command.Parameters.Add(new SqlParameter("@Date", SqlDbType.VarChar));
-                    command.Parameters.Add(new SqlParameter("@Product", SqlDbType.VarChar));
-                    command.Parameters.Add(new SqlParameter("@Manufacturer", SqlDbType.VarChar));
-                    command.Parameters.Add(new SqlParameter("@Place", SqlDbType.VarChar));
-                    command.Parameters.Add(new SqlParameter("@Price", SqlDbType.Real));
+        //            command.Parameters.Add(new SqlParameter("@Date", SqlDbType.VarChar));
+        //            command.Parameters.Add(new SqlParameter("@Product", SqlDbType.VarChar));
+        //            command.Parameters.Add(new SqlParameter("@Manufacturer", SqlDbType.VarChar));
+        //            command.Parameters.Add(new SqlParameter("@Place", SqlDbType.VarChar));
+        //            command.Parameters.Add(new SqlParameter("@Price", SqlDbType.Real));
 
-                    try
-                    {
-                        connect.Open();
-                    }
-                    catch (Exception exc)
-                    {
-                        Console.WriteLine(exc.ToString());
-                    }
+        //            try
+        //            {
+        //                connect.Open();
+        //            }
+        //            catch (Exception exc)
+        //            {
+        //                Console.WriteLine(exc.ToString());
+        //            }
                     
-                    foreach (DataGridViewRow row in dataGridView1.Rows)
-                    {
-                        if (!row.IsNewRow)
-                        {
-                            command.Parameters["@Date"].Value = row.Cells[0].Value;
-                            command.Parameters["@Product"].Value = row.Cells[1].Value;
-                            command.Parameters["@Manufacturer"].Value = row.Cells[2].Value;
-                            command.Parameters["@Place"].Value = row.Cells[3].Value;
-                            command.Parameters["@Price"].Value = row.Cells[4].Value;
+        //            foreach (DataGridViewRow row in dataGridView1.Rows)
+        //            {
+        //                if (!row.IsNewRow)
+        //                {
+        //                    command.Parameters["@Date"].Value = row.Cells[0].Value;
+        //                    command.Parameters["@Product"].Value = row.Cells[1].Value;
+        //                    command.Parameters["@Manufacturer"].Value = row.Cells[2].Value;
+        //                    command.Parameters["@Place"].Value = row.Cells[3].Value;
+        //                    command.Parameters["@Price"].Value = row.Cells[4].Value;
 
-                            command.ExecuteNonQuery();
-                        }
-                    }
+        //                    command.ExecuteNonQuery();
+        //                }
+        //            }
 
-                    try
-                    {
-                        connect.Close();
-                    }
-                    catch (Exception exc)
-                    {
-                        Console.WriteLine(exc.ToString());
-                    }
+        //            try
+        //            {
+        //                connect.Close();
+        //            }
+        //            catch (Exception exc)
+        //            {
+        //                Console.WriteLine(exc.ToString());
+        //            }
 
-                }
-            }
-        }
+        //        }
+        //    }
+        //}
 
-        private void delete_table()
+        private void delete_database()
         {
             using (SqlConnection connect = new SqlConnection(str))
             {
@@ -161,77 +199,56 @@ namespace WindowsFormsApp1
             }
         }
 
-        //take data from database to listview
-        private void btUd_Click(object sender, EventArgs e)
+ 
+        //insert new record into database
+        private void insert_database()
         {
-
-            using (SqlConnection connect = new SqlConnection(str))
+            using (SqlConnection conn = new SqlConnection(str))
             {
-                using (SqlCommand command = new SqlCommand("select * from TestTable",connect))
+                using(SqlCommand cmd = new SqlCommand())
                 {
+                    cmd.Connection = conn;
+                    cmd.CommandText = "insert into TestTable(Date,Product,Manufacturer,Place,Price) values(@Date, @Product, @Manufacturer, @Place, @Price)";
+                    cmd.Parameters.Add(new SqlParameter("@Date", SqlDbType.Date));
+                    cmd.Parameters.Add(new SqlParameter("@Product", SqlDbType.VarChar));
+                    cmd.Parameters.Add(new SqlParameter("@Manufacturer", SqlDbType.VarChar));
+                    cmd.Parameters.Add(new SqlParameter("@Place", SqlDbType.VarChar));
+                    cmd.Parameters.Add(new SqlParameter("@Price", SqlDbType.Real));
 
-                    SqlDataReader myReader = null;
-
-                    //open connection to sql server
                     try
                     {
-                        connect.Open();
+                        conn.Open();
+                    }
+                    catch(Exception e)
+                    {
+                        Console.WriteLine(e.ToString());
+                    }
+
+                    cmd.Parameters["@Date"].Value = dateTimePicker1.Value.Date;
+                    cmd.Parameters["@Product"].Value = tbTH.Text;
+                    cmd.Parameters["@Manufacturer"].Value = tbHSX.Text;
+                    cmd.Parameters["@Place"].Value = tbNM.Text;
+                    cmd.Parameters["@Price"].Value = nupG.Value;
+                    cmd.ExecuteNonQuery();
+
+                    try
+                    {
+                        conn.Close();
                     }
                     catch (Exception exc)
                     {
                         Console.WriteLine(exc.ToString());
                     }
-
-                    try
-                    {
-
-                        //execute read command from database in sql server                
-                        myReader = command.ExecuteReader();
-
-                        // read each row from TestTable and write it into listView1
-                        while (myReader.Read())
-                        {
-
-                        //do something with data read
-
-                        }
-                    }
-                    catch (Exception exc)
-                    {
-                        Console.WriteLine(exc.ToString());
-                    }
-
-                    //close the reader 
-                    try
-                    {
-                        myReader.Close();
-                    }
-                    catch (Exception exc)
-                    {
-                        Console.WriteLine(exc.ToString());
-                    }
-
-                    //close the connection
-                    try
-                    {
-                        connect.Close();
-                    }
-                    catch (Exception exc)
-                    {
-                        Console.WriteLine(exc.ToString());
-                    }
-
-
                 }
             }
-
-
         }
 
         //update from database to datagridview
-        private void button1_Click(object sender, EventArgs e)
+        private void update_datagridview()
         {
             this.testTableTableAdapter.Fill(this.testdbDataSet4.TestTable);
         }
+
+
     }
 }
