@@ -45,8 +45,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.cbXtc = new System.Windows.Forms.CheckBox();
-            this.cbT = new System.Windows.Forms.ComboBox();
-            this.cbN = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -59,6 +57,9 @@
             this.testdbDataSet4 = new WindowsFormsApp1.TestdbDataSet4();
             this.btSdb = new System.Windows.Forms.Button();
             this.testTableTableAdapter = new WindowsFormsApp1.TestdbDataSet4TableAdapters.TestTableTableAdapter();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.btLoc = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nupG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.testTableBindingSource)).BeginInit();
@@ -75,16 +76,18 @@
             // 
             // tbTH
             // 
-            this.tbTH.Location = new System.Drawing.Point(50, 75);
+            this.tbTH.Location = new System.Drawing.Point(67, 92);
+            this.tbTH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbTH.Name = "tbTH";
-            this.tbTH.Size = new System.Drawing.Size(150, 20);
+            this.tbTH.Size = new System.Drawing.Size(199, 22);
             this.tbTH.TabIndex = 0;
             // 
             // tbHSX
             // 
-            this.tbHSX.Location = new System.Drawing.Point(250, 75);
+            this.tbHSX.Location = new System.Drawing.Point(333, 92);
+            this.tbHSX.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbHSX.Name = "tbHSX";
-            this.tbHSX.Size = new System.Drawing.Size(150, 20);
+            this.tbHSX.Size = new System.Drawing.Size(199, 22);
             this.tbHSX.TabIndex = 1;
             // 
             // nupG
@@ -95,7 +98,8 @@
             0,
             0,
             131072});
-            this.nupG.Location = new System.Drawing.Point(650, 75);
+            this.nupG.Location = new System.Drawing.Point(867, 92);
+            this.nupG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nupG.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -107,14 +111,15 @@
             0,
             -2147483648});
             this.nupG.Name = "nupG";
-            this.nupG.Size = new System.Drawing.Size(100, 20);
+            this.nupG.Size = new System.Drawing.Size(100, 22);
             this.nupG.TabIndex = 3;
             // 
             // btThem
             // 
-            this.btThem.Location = new System.Drawing.Point(650, 115);
+            this.btThem.Location = new System.Drawing.Point(867, 142);
+            this.btThem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btThem.Name = "btThem";
-            this.btThem.Size = new System.Drawing.Size(75, 23);
+            this.btThem.Size = new System.Drawing.Size(100, 28);
             this.btThem.TabIndex = 5;
             this.btThem.Text = "Thêm";
             this.btThem.UseVisualStyleBackColor = true;
@@ -123,35 +128,39 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(50, 40);
+            this.label1.Location = new System.Drawing.Point(67, 49);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 15);
+            this.label1.Size = new System.Drawing.Size(68, 16);
             this.label1.TabIndex = 10;
             this.label1.Text = "Tên Hàng";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(250, 40);
+            this.label2.Location = new System.Drawing.Point(333, 49);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 15);
+            this.label2.Size = new System.Drawing.Size(100, 16);
             this.label2.TabIndex = 11;
             this.label2.Text = "Hãng Sản Xuất:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(650, 40);
+            this.label3.Location = new System.Drawing.Point(867, 49);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 15);
+            this.label3.Size = new System.Drawing.Size(32, 16);
             this.label3.TabIndex = 13;
             this.label3.Text = "Giá:";
             // 
             // btXoa
             // 
-            this.btXoa.Location = new System.Drawing.Point(800, 115);
+            this.btXoa.Location = new System.Drawing.Point(993, 142);
+            this.btXoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btXoa.Name = "btXoa";
-            this.btXoa.Size = new System.Drawing.Size(75, 23);
+            this.btXoa.Size = new System.Drawing.Size(100, 28);
             this.btXoa.TabIndex = 6;
             this.btXoa.Text = "Xóa";
             this.btXoa.UseVisualStyleBackColor = true;
@@ -159,17 +168,19 @@
             // 
             // tbNM
             // 
-            this.tbNM.Location = new System.Drawing.Point(450, 75);
+            this.tbNM.Location = new System.Drawing.Point(600, 92);
+            this.tbNM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbNM.Name = "tbNM";
-            this.tbNM.Size = new System.Drawing.Size(150, 20);
+            this.tbNM.Size = new System.Drawing.Size(199, 22);
             this.tbNM.TabIndex = 2;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(450, 40);
+            this.label4.Location = new System.Drawing.Point(600, 49);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 15);
+            this.label4.Size = new System.Drawing.Size(61, 16);
             this.label4.TabIndex = 12;
             this.label4.Text = "Nơi Mua:";
             // 
@@ -182,17 +193,19 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(800, 75);
+            this.dateTimePicker1.Location = new System.Drawing.Point(993, 92);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(150, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(100, 22);
             this.dateTimePicker1.TabIndex = 4;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(800, 40);
+            this.label5.Location = new System.Drawing.Point(993, 49);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 15);
+            this.label5.Size = new System.Drawing.Size(73, 16);
             this.label5.TabIndex = 14;
             this.label5.Text = "Ngày Mua:";
             // 
@@ -201,68 +214,34 @@
             this.cbXtc.AutoSize = true;
             this.cbXtc.Checked = true;
             this.cbXtc.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbXtc.Location = new System.Drawing.Point(50, 125);
+            this.cbXtc.Location = new System.Drawing.Point(67, 154);
+            this.cbXtc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbXtc.Name = "cbXtc";
-            this.cbXtc.Size = new System.Drawing.Size(96, 19);
+            this.cbXtc.Size = new System.Drawing.Size(100, 20);
             this.cbXtc.TabIndex = 15;
             this.cbXtc.Text = "Xem Tất Cả:";
             this.cbXtc.UseVisualStyleBackColor = true;
             this.cbXtc.CheckedChanged += new System.EventHandler(this.cbXtc_CheckedChanged);
             // 
-            // cbT
-            // 
-            this.cbT.Enabled = false;
-            this.cbT.FormattingEnabled = true;
-            this.cbT.Items.AddRange(new object[] {
-            "Januar",
-            "Februar",
-            "März",
-            "Avril",
-            "Mai",
-            "Juni",
-            "Juli",
-            "August",
-            "September",
-            "Oktober",
-            "November",
-            "Dezember"});
-            this.cbT.Location = new System.Drawing.Point(250, 145);
-            this.cbT.Name = "cbT";
-            this.cbT.Size = new System.Drawing.Size(56, 21);
-            this.cbT.TabIndex = 16;
-            // 
-            // cbN
-            // 
-            this.cbN.Enabled = false;
-            this.cbN.FormattingEnabled = true;
-            this.cbN.Items.AddRange(new object[] {
-            "2017",
-            "2018",
-            "2019",
-            "2020",
-            "2021"});
-            this.cbN.Location = new System.Drawing.Point(345, 145);
-            this.cbN.Name = "cbN";
-            this.cbN.Size = new System.Drawing.Size(56, 21);
-            this.cbN.TabIndex = 17;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(250, 125);
+            this.label6.Location = new System.Drawing.Point(333, 154);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(45, 15);
+            this.label6.Size = new System.Drawing.Size(27, 16);
             this.label6.TabIndex = 18;
-            this.label6.Text = "Tháng:";
+            this.label6.Text = "Từ:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(345, 125);
+            this.label7.Location = new System.Drawing.Point(460, 154);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(37, 15);
+            this.label7.Size = new System.Drawing.Size(31, 16);
             this.label7.TabIndex = 19;
-            this.label7.Text = "Năm:";
+            this.label7.Text = "Tới:";
             // 
             // dataGridView1
             // 
@@ -277,47 +256,56 @@
             this.placeDataGridViewTextBoxColumn,
             this.priceDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.testTableBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(50, 181);
+            this.dataGridView1.Location = new System.Drawing.Point(67, 223);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 50;
-            this.dataGridView1.Size = new System.Drawing.Size(900, 525);
+            this.dataGridView1.Size = new System.Drawing.Size(1200, 646);
             this.dataGridView1.TabIndex = 20;
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // dateDataGridViewTextBoxColumn
             // 
             this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
             this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
             this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // productDataGridViewTextBoxColumn
             // 
             this.productDataGridViewTextBoxColumn.DataPropertyName = "Product";
             this.productDataGridViewTextBoxColumn.HeaderText = "Product";
             this.productDataGridViewTextBoxColumn.Name = "productDataGridViewTextBoxColumn";
+            this.productDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // manufacturerDataGridViewTextBoxColumn
             // 
             this.manufacturerDataGridViewTextBoxColumn.DataPropertyName = "Manufacturer";
             this.manufacturerDataGridViewTextBoxColumn.HeaderText = "Manufacturer";
             this.manufacturerDataGridViewTextBoxColumn.Name = "manufacturerDataGridViewTextBoxColumn";
+            this.manufacturerDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // placeDataGridViewTextBoxColumn
             // 
             this.placeDataGridViewTextBoxColumn.DataPropertyName = "Place";
             this.placeDataGridViewTextBoxColumn.HeaderText = "Place";
             this.placeDataGridViewTextBoxColumn.Name = "placeDataGridViewTextBoxColumn";
+            this.placeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // priceDataGridViewTextBoxColumn
             // 
             this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
             this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
             this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // testTableBindingSource
             // 
             this.testTableBindingSource.DataMember = "TestTable";
             this.testTableBindingSource.DataSource = this.testdbDataSet4;
+
             // 
             // testdbDataSet4
             // 
@@ -327,25 +315,59 @@
             // btSdb
             // 
             this.btSdb.Location = new System.Drawing.Point(0, 0);
+            this.btSdb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btSdb.Name = "btSdb";
-            this.btSdb.Size = new System.Drawing.Size(75, 23);
+            this.btSdb.Size = new System.Drawing.Size(100, 28);
             this.btSdb.TabIndex = 0;
             // 
             // testTableTableAdapter
             // 
             this.testTableTableAdapter.ClearBeforeFill = true;
             // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Enabled = false;
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker2.Location = new System.Drawing.Point(336, 174);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(106, 22);
+            this.dateTimePicker2.TabIndex = 21;
+            // 
+            // dateTimePicker3
+            // 
+            this.dateTimePicker3.Enabled = false;
+            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker3.Location = new System.Drawing.Point(463, 174);
+            this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(4);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(106, 22);
+            this.dateTimePicker3.TabIndex = 22;
+            // 
+            // btLoc
+            // 
+            this.btLoc.Enabled = false;
+            this.btLoc.Location = new System.Drawing.Point(600, 168);
+            this.btLoc.Margin = new System.Windows.Forms.Padding(4);
+            this.btLoc.Name = "btLoc";
+            this.btLoc.Size = new System.Drawing.Size(100, 28);
+            this.btLoc.TabIndex = 23;
+            this.btLoc.Text = "Lọc:";
+            this.btLoc.UseVisualStyleBackColor = true;
+            this.btLoc.Click += new System.EventHandler(this.btLoc_Click);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 761);
+            this.ClientSize = new System.Drawing.Size(1312, 937);
+            this.Controls.Add(this.btLoc);
+            this.Controls.Add(this.dateTimePicker3);
+            this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.btSdb);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.cbN);
-            this.Controls.Add(this.cbT);
             this.Controls.Add(this.cbXtc);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dateTimePicker1);
@@ -359,6 +381,7 @@
             this.Controls.Add(this.nupG);
             this.Controls.Add(this.tbHSX);
             this.Controls.Add(this.tbTH);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Liệt Kê Chi Tiêu";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -388,8 +411,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.CheckBox cbXtc;
-        private System.Windows.Forms.ComboBox cbT;
-        private System.Windows.Forms.ComboBox cbN;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -402,6 +423,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn manufacturerDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn placeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.Button btLoc;
     }
 }
 

@@ -12,12 +12,14 @@ using System.Text.RegularExpressions;
 using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Globalization;
 
 namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
-
+        //string use to connect to server
+        //server explorer, datenverbindungen, Eigenschaften -> Verbindungszeichenfolge
         private const string str = "Data Source=BIB-LHOX\\CONEXIO;Initial Catalog=Testdb;Integrated Security=True";
 
         public Form1()
@@ -25,6 +27,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+        //button Them (add) is clicked
         private void btThem_Click(object sender, EventArgs e)
         {
             
@@ -47,6 +50,7 @@ namespace WindowsFormsApp1
             }
         }
 
+        //button Xoa (delete) is clicked
         private void btXoa_Click(object sender, EventArgs e)
         {
 
@@ -58,8 +62,9 @@ namespace WindowsFormsApp1
                     using (SqlCommand cmd = new SqlCommand())
                     {
                         cmd.Connection = conn;
-                        cmd.CommandText = "Delete from TestTable where Product=@Product";
+                        cmd.CommandText = "Delete from TestTable where Product=@Product and Date = @Date";
                         cmd.Parameters.Add(new SqlParameter("@Product", SqlDbType.VarChar));
+                        cmd.Parameters.Add(new SqlParameter("@Date", SqlDbType.Date));
 
                         try
                         {
@@ -70,6 +75,7 @@ namespace WindowsFormsApp1
                             Console.WriteLine(exc.ToString());
                         }
                         cmd.Parameters["@Product"].Value = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+                        cmd.Parameters["@Date"].Value = Convert.ToDateTime(dataGridView1.SelectedRows[0].Cells[0].Value).Date;
                         cmd.ExecuteNonQuery();
 
                         try
@@ -85,6 +91,10 @@ namespace WindowsFormsApp1
 
                 dataGridView1.Rows.RemoveAt(this.dataGridView1.SelectedRows[0].Index);
             }
+            else
+            {
+                MessageBox.Show("Hãy chọn một dòng để xóa", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
             
         }
@@ -99,17 +109,21 @@ namespace WindowsFormsApp1
 
         }
 
+        //checkbox: xem tất cả hay theo filter ngày tháng
         private void cbXtc_CheckedChanged(object sender, EventArgs e)
         {
             if (cbXtc.Checked)
             {
-                cbT.Enabled = false;
-                cbN.Enabled = false;
+                dateTimePicker2.Enabled = false;
+                dateTimePicker3.Enabled = false;
+                btLoc.Enabled = false;
+                testTableBindingSource.RemoveFilter();
             }
             else
             {
-                cbT.Enabled = true;
-                cbN.Enabled = true;
+                dateTimePicker2.Enabled = true;
+                dateTimePicker3.Enabled = true;
+                btLoc.Enabled = true;
             }
         }
 
@@ -120,61 +134,7 @@ namespace WindowsFormsApp1
 
         }
 
-        //save data from datagridview to database - no more used
-        //private void btSdb_Click(object sender, EventArgs e)
-        //{
-
-        //    delete_database();
-
-        //    using (SqlConnection connect = new SqlConnection(str))
-        //    {
-        //        using (SqlCommand command = new SqlCommand())
-        //        {
-        //            command.Connection = connect;
-        //            command.CommandText = "insert into TestTable(Date, Product, Manufacturer, Place, Price) values(@Date, @Product, @Manufacturer, @Place, @Price)";
-
-        //            command.Parameters.Add(new SqlParameter("@Date", SqlDbType.VarChar));
-        //            command.Parameters.Add(new SqlParameter("@Product", SqlDbType.VarChar));
-        //            command.Parameters.Add(new SqlParameter("@Manufacturer", SqlDbType.VarChar));
-        //            command.Parameters.Add(new SqlParameter("@Place", SqlDbType.VarChar));
-        //            command.Parameters.Add(new SqlParameter("@Price", SqlDbType.Real));
-
-        //            try
-        //            {
-        //                connect.Open();
-        //            }
-        //            catch (Exception exc)
-        //            {
-        //                Console.WriteLine(exc.ToString());
-        //            }
-                    
-        //            foreach (DataGridViewRow row in dataGridView1.Rows)
-        //            {
-        //                if (!row.IsNewRow)
-        //                {
-        //                    command.Parameters["@Date"].Value = row.Cells[0].Value;
-        //                    command.Parameters["@Product"].Value = row.Cells[1].Value;
-        //                    command.Parameters["@Manufacturer"].Value = row.Cells[2].Value;
-        //                    command.Parameters["@Place"].Value = row.Cells[3].Value;
-        //                    command.Parameters["@Price"].Value = row.Cells[4].Value;
-
-        //                    command.ExecuteNonQuery();
-        //                }
-        //            }
-
-        //            try
-        //            {
-        //                connect.Close();
-        //            }
-        //            catch (Exception exc)
-        //            {
-        //                Console.WriteLine(exc.ToString());
-        //            }
-
-        //        }
-        //    }
-        //}
-
+        //delete TestTable form server database
         private void delete_database()
         {
             using (SqlConnection connect = new SqlConnection(str))
@@ -249,6 +209,36 @@ namespace WindowsFormsApp1
             this.testTableTableAdapter.Fill(this.testdbDataSet4.TestTable);
         }
 
+        //ấn nút Lọc kết quả theo khoảng ngày tháng
+        private void btLoc_Click(object sender, EventArgs e)
+        {
+            testTableBindingSource.Filter = "Date >= '" + dateTimePicker2.Value + "' And Date <='" + dateTimePicker3.Value + "'";
+        }
+
+        //chọn 1 dòng trong datagridview
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            var numberFormatInfo = new NumberFormatInfo { NumberDecimalSeparator = "," };
+
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                tbTH.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+                tbHSX.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+                tbNM.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+                dateTimePicker1.Value = Convert.ToDateTime(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
+                nupG.Value = Decimal.Parse(dataGridView1.SelectedRows[0].Cells[4].Value.ToString(), NumberStyles.AllowDecimalPoint, numberFormatInfo);
+                //nupG.Value = Decimal.Parse(dataGridView1.SelectedRows[0].Cells[4].Value.ToString(),NumberStyles.AllowDecimalPoint, CultureInfo.InvariantCulture);
+            }
+            else
+            {
+                tbTH.Text = "";
+                tbHSX.Text = "";
+                tbNM.Text = "";
+                dateTimePicker1.Value = DateTime.Now.Date;
+                nupG.Value = 0;
+            }
+
+        }
 
     }
 }
