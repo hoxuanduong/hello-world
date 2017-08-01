@@ -28,5 +28,11 @@ namespace WindowsFormsApp1
             Form1 qlct = new Form1();
             qlct.Show();
         }
+
+        private void btQldt_Click(object sender, EventArgs e)
+        {
+            DauTu dt = new DauTu();
+            dt.Show();
+        }
     }
 }

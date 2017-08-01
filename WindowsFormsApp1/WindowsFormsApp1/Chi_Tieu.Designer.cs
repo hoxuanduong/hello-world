@@ -77,7 +77,7 @@
             // tbTH
             // 
             this.tbTH.Location = new System.Drawing.Point(67, 92);
-            this.tbTH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbTH.Margin = new System.Windows.Forms.Padding(4);
             this.tbTH.Name = "tbTH";
             this.tbTH.Size = new System.Drawing.Size(199, 22);
             this.tbTH.TabIndex = 0;
@@ -85,7 +85,7 @@
             // tbHSX
             // 
             this.tbHSX.Location = new System.Drawing.Point(333, 92);
-            this.tbHSX.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbHSX.Margin = new System.Windows.Forms.Padding(4);
             this.tbHSX.Name = "tbHSX";
             this.tbHSX.Size = new System.Drawing.Size(199, 22);
             this.tbHSX.TabIndex = 1;
@@ -99,7 +99,7 @@
             0,
             131072});
             this.nupG.Location = new System.Drawing.Point(867, 92);
-            this.nupG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nupG.Margin = new System.Windows.Forms.Padding(4);
             this.nupG.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -117,7 +117,7 @@
             // btThem
             // 
             this.btThem.Location = new System.Drawing.Point(867, 142);
-            this.btThem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btThem.Margin = new System.Windows.Forms.Padding(4);
             this.btThem.Name = "btThem";
             this.btThem.Size = new System.Drawing.Size(100, 28);
             this.btThem.TabIndex = 5;
@@ -158,7 +158,7 @@
             // btXoa
             // 
             this.btXoa.Location = new System.Drawing.Point(993, 142);
-            this.btXoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btXoa.Margin = new System.Windows.Forms.Padding(4);
             this.btXoa.Name = "btXoa";
             this.btXoa.Size = new System.Drawing.Size(100, 28);
             this.btXoa.TabIndex = 6;
@@ -169,7 +169,7 @@
             // tbNM
             // 
             this.tbNM.Location = new System.Drawing.Point(600, 92);
-            this.tbNM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbNM.Margin = new System.Windows.Forms.Padding(4);
             this.tbNM.Name = "tbNM";
             this.tbNM.Size = new System.Drawing.Size(199, 22);
             this.tbNM.TabIndex = 2;
@@ -194,7 +194,7 @@
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(993, 92);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(100, 22);
             this.dateTimePicker1.TabIndex = 4;
@@ -215,7 +215,7 @@
             this.cbXtc.Checked = true;
             this.cbXtc.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbXtc.Location = new System.Drawing.Point(67, 154);
-            this.cbXtc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbXtc.Margin = new System.Windows.Forms.Padding(4);
             this.cbXtc.Name = "cbXtc";
             this.cbXtc.Size = new System.Drawing.Size(100, 20);
             this.cbXtc.TabIndex = 15;
@@ -257,7 +257,7 @@
             this.priceDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.testTableBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(67, 223);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -305,7 +305,6 @@
             // 
             this.testTableBindingSource.DataMember = "TestTable";
             this.testTableBindingSource.DataSource = this.testdbDataSet4;
-
             // 
             // testdbDataSet4
             // 
@@ -315,7 +314,7 @@
             // btSdb
             // 
             this.btSdb.Location = new System.Drawing.Point(0, 0);
-            this.btSdb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btSdb.Margin = new System.Windows.Forms.Padding(4);
             this.btSdb.Name = "btSdb";
             this.btSdb.Size = new System.Drawing.Size(100, 28);
             this.btSdb.TabIndex = 0;
@@ -352,7 +351,7 @@
             this.btLoc.Name = "btLoc";
             this.btLoc.Size = new System.Drawing.Size(100, 28);
             this.btLoc.TabIndex = 23;
-            this.btLoc.Text = "Lọc:";
+            this.btLoc.Text = "Lọc";
             this.btLoc.UseVisualStyleBackColor = true;
             this.btLoc.Click += new System.EventHandler(this.btLoc_Click);
             // 
@@ -360,7 +359,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1312, 937);
+            this.ClientSize = new System.Drawing.Size(1334, 961);
             this.Controls.Add(this.btLoc);
             this.Controls.Add(this.dateTimePicker3);
             this.Controls.Add(this.dateTimePicker2);
@@ -381,7 +380,7 @@
             this.Controls.Add(this.nupG);
             this.Controls.Add(this.tbHSX);
             this.Controls.Add(this.tbTH);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Liệt Kê Chi Tiêu";
             this.Load += new System.EventHandler(this.Form1_Load);

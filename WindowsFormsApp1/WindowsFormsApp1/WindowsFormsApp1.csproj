@@ -52,10 +52,27 @@
     <Compile Include="Chi_Tieu.Designer.cs">
       <DependentUpon>Chi_Tieu.cs</DependentUpon>
     </Compile>
+    <Compile Include="DauTu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DauTu.Designer.cs">
+      <DependentUpon>DauTu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiaoDichVon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiaoDichVon.Designer.cs">
+      <DependentUpon>GiaoDichVon.cs</DependentUpon>
+    </Compile>
     <Compile Include="TestdbDataSet4.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TestdbDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TestdbDataSetGiaoDichVon.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TestdbDataSetGiaoDichVon.xsd</DependentUpon>
     </Compile>
     <Compile Include="Trang_Chinh.cs">
       <SubType>Form</SubType>
@@ -67,6 +84,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Chi_Tieu.resx">
       <DependentUpon>Chi_Tieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DauTu.resx">
+      <DependentUpon>DauTu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiaoDichVon.resx">
+      <DependentUpon>GiaoDichVon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -99,6 +122,17 @@
     </None>
     <None Include="TestdbDataSet4.xss">
       <DependentUpon>TestdbDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="TestdbDataSetGiaoDichVon.xsc">
+      <DependentUpon>TestdbDataSetGiaoDichVon.xsd</DependentUpon>
+    </None>
+    <None Include="TestdbDataSetGiaoDichVon.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TestdbDataSetGiaoDichVon.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TestdbDataSetGiaoDichVon.xss">
+      <DependentUpon>TestdbDataSetGiaoDichVon.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
