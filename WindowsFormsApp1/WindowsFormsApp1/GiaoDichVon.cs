@@ -290,6 +290,23 @@ namespace WindowsFormsApp1
             this.giaoDichVonTableAdapter.Fill(this.gDV.GiaoDichVon);
         }
 
+        private void dgvGiaoDichVon_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            //DataGridViewRow row = dgvGiaoDichVon.Rows[e.RowIndex];
 
-    }
+            //if ((LoaiGiaoDich)cbLoaiGiaoDichVon.SelectedIndex == LoaiGiaoDich.them)
+            //{
+
+            //    row.DefaultCellStyle.ForeColor = Color.Green;
+
+            //}
+            //else if ((LoaiGiaoDich)cbLoaiGiaoDichVon.SelectedIndex == LoaiGiaoDich.thoai)
+            //{
+
+            //    row.DefaultCellStyle.ForeColor = Color.Red;
+
+            //}
+        }
+
+        }
 }

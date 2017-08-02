@@ -126,7 +126,7 @@
             this.flowLayoutPanel1.Controls.Add(this.btQlhd);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 24);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1312, 913);
             this.flowLayoutPanel1.TabIndex = 1;
@@ -135,7 +135,7 @@
             // 
             this.btQlct.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btQlct.Location = new System.Drawing.Point(4, 4);
-            this.btQlct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btQlct.Margin = new System.Windows.Forms.Padding(4);
             this.btQlct.Name = "btQlct";
             this.btQlct.Size = new System.Drawing.Size(200, 185);
             this.btQlct.TabIndex = 0;
@@ -147,7 +147,7 @@
             // 
             this.btQldt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btQldt.Location = new System.Drawing.Point(212, 4);
-            this.btQldt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btQldt.Margin = new System.Windows.Forms.Padding(4);
             this.btQldt.Name = "btQldt";
             this.btQldt.Size = new System.Drawing.Size(200, 185);
             this.btQldt.TabIndex = 1;
@@ -159,7 +159,7 @@
             // 
             this.btQltn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btQltn.Location = new System.Drawing.Point(420, 4);
-            this.btQltn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btQltn.Margin = new System.Windows.Forms.Padding(4);
             this.btQltn.Name = "btQltn";
             this.btQltn.Size = new System.Drawing.Size(200, 185);
             this.btQltn.TabIndex = 2;
@@ -170,7 +170,7 @@
             // 
             this.btQlgt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btQlgt.Location = new System.Drawing.Point(628, 4);
-            this.btQlgt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btQlgt.Margin = new System.Windows.Forms.Padding(4);
             this.btQlgt.Name = "btQlgt";
             this.btQlgt.Size = new System.Drawing.Size(200, 185);
             this.btQlgt.TabIndex = 3;
@@ -181,7 +181,7 @@
             // 
             this.btQlcvlh.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btQlcvlh.Location = new System.Drawing.Point(836, 4);
-            this.btQlcvlh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btQlcvlh.Margin = new System.Windows.Forms.Padding(4);
             this.btQlcvlh.Name = "btQlcvlh";
             this.btQlcvlh.Size = new System.Drawing.Size(200, 185);
             this.btQlcvlh.TabIndex = 4;
@@ -192,7 +192,7 @@
             // 
             this.btQlhd.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btQlhd.Location = new System.Drawing.Point(1044, 4);
-            this.btQlhd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btQlhd.Margin = new System.Windows.Forms.Padding(4);
             this.btQlhd.Name = "btQlhd";
             this.btQlhd.Size = new System.Drawing.Size(200, 185);
             this.btQlhd.TabIndex = 5;
@@ -206,8 +206,9 @@
             this.ClientSize = new System.Drawing.Size(1312, 937);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Main";
             this.Text = "Phần Mềm Quản Lý Cá Nhân";
             this.menuStrip1.ResumeLayout(false);

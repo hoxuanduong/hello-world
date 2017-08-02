@@ -16,13 +16,13 @@ using System.Globalization;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form1 : Form
+    public partial class LietKeChiTieu : Form
     {
         //string use to connect to server
         //server explorer, datenverbindungen, Eigenschaften -> Verbindungszeichenfolge
         private const string str = "Data Source=BIB-LHOX\\CONEXIO;Initial Catalog=Testdb;Integrated Security=True";
 
-        public Form1()
+        public LietKeChiTieu()
         {
             InitializeComponent();
         }
@@ -57,39 +57,44 @@ namespace WindowsFormsApp1
             if (this.dataGridView1.SelectedRows.Count > 0)
             {
 
-                using (SqlConnection conn = new SqlConnection(str))
+                if (dataGridView1.SelectedRows[0].Index != dataGridView1.NewRowIndex)
                 {
-                    using (SqlCommand cmd = new SqlCommand())
+                    using (SqlConnection conn = new SqlConnection(str))
                     {
-                        cmd.Connection = conn;
-                        cmd.CommandText = "Delete from TestTable where Product=@Product and Date = @Date";
-                        cmd.Parameters.Add(new SqlParameter("@Product", SqlDbType.VarChar));
-                        cmd.Parameters.Add(new SqlParameter("@Date", SqlDbType.Date));
+                        using (SqlCommand cmd = new SqlCommand())
+                        {
+                            cmd.Connection = conn;
+                            cmd.CommandText = "Delete from TestTable where Product=@Product and Date = @Date";
+                            cmd.Parameters.Add(new SqlParameter("@Product", SqlDbType.VarChar));
+                            cmd.Parameters.Add(new SqlParameter("@Date", SqlDbType.Date));
 
-                        try
-                        {
-                            conn.Open();
-                        }
-                        catch (Exception exc)
-                        {
-                            Console.WriteLine(exc.ToString());
-                        }
-                        cmd.Parameters["@Product"].Value = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
-                        cmd.Parameters["@Date"].Value = Convert.ToDateTime(dataGridView1.SelectedRows[0].Cells[0].Value).Date;
-                        cmd.ExecuteNonQuery();
+                            try
+                            {
+                                conn.Open();
+                            }
+                            catch (Exception exc)
+                            {
+                                Console.WriteLine(exc.ToString());
+                            }
+                            cmd.Parameters["@Product"].Value = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+                            cmd.Parameters["@Date"].Value = Convert.ToDateTime(dataGridView1.SelectedRows[0].Cells[0].Value).Date;
+                            cmd.ExecuteNonQuery();
 
-                        try
-                        {
-                            conn.Close();
-                        }
-                        catch (Exception exc)
-                        {
-                            Console.WriteLine(exc.ToString());
+                            try
+                            {
+                                conn.Close();
+                            }
+                            catch (Exception exc)
+                            {
+                                Console.WriteLine(exc.ToString());
+                            }
                         }
                     }
+
+                    dataGridView1.Rows.RemoveAt(this.dataGridView1.SelectedRows[0].Index);
                 }
 
-                dataGridView1.Rows.RemoveAt(this.dataGridView1.SelectedRows[0].Index);
+
             }
             else
             {
@@ -222,12 +227,15 @@ namespace WindowsFormsApp1
 
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                tbTH.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
-                tbHSX.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
-                tbNM.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
-                dateTimePicker1.Value = Convert.ToDateTime(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
-                nupG.Value = Decimal.Parse(dataGridView1.SelectedRows[0].Cells[4].Value.ToString(), NumberStyles.AllowDecimalPoint, numberFormatInfo);
-                //nupG.Value = Decimal.Parse(dataGridView1.SelectedRows[0].Cells[4].Value.ToString(),NumberStyles.AllowDecimalPoint, CultureInfo.InvariantCulture);
+                if (dataGridView1.SelectedRows[0].Index != dataGridView1.NewRowIndex)
+                {
+                    tbTH.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+                    tbHSX.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+                    tbNM.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+                    dateTimePicker1.Value = Convert.ToDateTime(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
+                    nupG.Value = Decimal.Parse(dataGridView1.SelectedRows[0].Cells[4].Value.ToString(), NumberStyles.AllowDecimalPoint, numberFormatInfo);
+                    //nupG.Value = Decimal.Parse(dataGridView1.SelectedRows[0].Cells[4].Value.ToString(),NumberStyles.AllowDecimalPoint, CultureInfo.InvariantCulture);
+                }
             }
             else
             {

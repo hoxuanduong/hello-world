@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class Form1
+    partial class LietKeChiTieu
     {
         /// <summary>
         /// Erforderliche Designervariable.
@@ -355,7 +355,7 @@
             this.btLoc.UseVisualStyleBackColor = true;
             this.btLoc.Click += new System.EventHandler(this.btLoc_Click);
             // 
-            // Form1
+            // LietKeChiTieu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -380,8 +380,9 @@
             this.Controls.Add(this.nupG);
             this.Controls.Add(this.tbHSX);
             this.Controls.Add(this.tbTH);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Form1";
+            this.Name = "LietKeChiTieu";
             this.Text = "Liệt Kê Chi Tiêu";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nupG)).EndInit();

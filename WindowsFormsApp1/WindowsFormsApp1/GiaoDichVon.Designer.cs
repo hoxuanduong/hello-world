@@ -33,6 +33,13 @@
             this.nudGiaoDichVon = new System.Windows.Forms.NumericUpDown();
             this.dtpGDV_D = new System.Windows.Forms.DateTimePicker();
             this.dgvGiaoDichVon = new System.Windows.Forms.DataGridView();
+            this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.currencyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.giaoDichVonBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gDV = new WindowsFormsApp1.gDV();
             this.btThem = new System.Windows.Forms.Button();
             this.btXoa = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,18 +63,11 @@
             this.lbeuro = new System.Windows.Forms.Label();
             this.lbusd = new System.Windows.Forms.Label();
             this.lbvnd = new System.Windows.Forms.Label();
-            this.gDV = new WindowsFormsApp1.gDV();
-            this.giaoDichVonBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.giaoDichVonTableAdapter = new WindowsFormsApp1.gDVTableAdapters.GiaoDichVonTableAdapter();
-            this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.currencyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.noteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.nudGiaoDichVon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGiaoDichVon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gDV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.giaoDichVonBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gDV)).BeginInit();
             this.SuspendLayout();
             // 
             // cbLoaiGiaoDichVon
@@ -126,6 +126,47 @@
             this.dgvGiaoDichVon.RowTemplate.Height = 24;
             this.dgvGiaoDichVon.Size = new System.Drawing.Size(1150, 500);
             this.dgvGiaoDichVon.TabIndex = 3;
+            this.dgvGiaoDichVon.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvGiaoDichVon_RowsAdded);
+            // 
+            // typeDataGridViewTextBoxColumn
+            // 
+            this.typeDataGridViewTextBoxColumn.DataPropertyName = "Type";
+            this.typeDataGridViewTextBoxColumn.HeaderText = "Type";
+            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
+            // 
+            // dateDataGridViewTextBoxColumn
+            // 
+            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
+            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            // 
+            // amountDataGridViewTextBoxColumn
+            // 
+            this.amountDataGridViewTextBoxColumn.DataPropertyName = "Amount";
+            this.amountDataGridViewTextBoxColumn.HeaderText = "Amount";
+            this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
+            // 
+            // currencyDataGridViewTextBoxColumn
+            // 
+            this.currencyDataGridViewTextBoxColumn.DataPropertyName = "Currency";
+            this.currencyDataGridViewTextBoxColumn.HeaderText = "Currency";
+            this.currencyDataGridViewTextBoxColumn.Name = "currencyDataGridViewTextBoxColumn";
+            // 
+            // noteDataGridViewTextBoxColumn
+            // 
+            this.noteDataGridViewTextBoxColumn.DataPropertyName = "Note";
+            this.noteDataGridViewTextBoxColumn.HeaderText = "Note";
+            this.noteDataGridViewTextBoxColumn.Name = "noteDataGridViewTextBoxColumn";
+            // 
+            // giaoDichVonBindingSource
+            // 
+            this.giaoDichVonBindingSource.DataMember = "GiaoDichVon";
+            this.giaoDichVonBindingSource.DataSource = this.gDV;
+            // 
+            // gDV
+            // 
+            this.gDV.DataSetName = "gDV";
+            this.gDV.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btThem
             // 
@@ -338,49 +379,9 @@
             this.lbvnd.TabIndex = 26;
             this.lbvnd.Text = "0,00";
             // 
-            // gDV
-            // 
-            this.gDV.DataSetName = "gDV";
-            this.gDV.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // giaoDichVonBindingSource
-            // 
-            this.giaoDichVonBindingSource.DataMember = "GiaoDichVon";
-            this.giaoDichVonBindingSource.DataSource = this.gDV;
-            // 
             // giaoDichVonTableAdapter
             // 
             this.giaoDichVonTableAdapter.ClearBeforeFill = true;
-            // 
-            // typeDataGridViewTextBoxColumn
-            // 
-            this.typeDataGridViewTextBoxColumn.DataPropertyName = "Type";
-            this.typeDataGridViewTextBoxColumn.HeaderText = "Type";
-            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
-            // 
-            // dateDataGridViewTextBoxColumn
-            // 
-            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
-            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
-            // 
-            // amountDataGridViewTextBoxColumn
-            // 
-            this.amountDataGridViewTextBoxColumn.DataPropertyName = "Amount";
-            this.amountDataGridViewTextBoxColumn.HeaderText = "Amount";
-            this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
-            // 
-            // currencyDataGridViewTextBoxColumn
-            // 
-            this.currencyDataGridViewTextBoxColumn.DataPropertyName = "Currency";
-            this.currencyDataGridViewTextBoxColumn.HeaderText = "Currency";
-            this.currencyDataGridViewTextBoxColumn.Name = "currencyDataGridViewTextBoxColumn";
-            // 
-            // noteDataGridViewTextBoxColumn
-            // 
-            this.noteDataGridViewTextBoxColumn.DataPropertyName = "Note";
-            this.noteDataGridViewTextBoxColumn.HeaderText = "Note";
-            this.noteDataGridViewTextBoxColumn.Name = "noteDataGridViewTextBoxColumn";
             // 
             // GiaoDichVon
             // 
@@ -414,13 +415,14 @@
             this.Controls.Add(this.dtpGDV_D);
             this.Controls.Add(this.nudGiaoDichVon);
             this.Controls.Add(this.cbLoaiGiaoDichVon);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "GiaoDichVon";
             this.Text = "GiaoDichVon";
             this.Load += new System.EventHandler(this.GiaoDichVon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudGiaoDichVon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGiaoDichVon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gDV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.giaoDichVonBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gDV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

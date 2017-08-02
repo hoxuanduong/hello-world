@@ -19,13 +19,13 @@ namespace WindowsFormsApp1
 
         private void quảnLýChiTiêuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form1 qlct = new Form1();
+            LietKeChiTieu qlct = new LietKeChiTieu();
             qlct.Show();
         }
 
         private void btQlct_Click(object sender, EventArgs e)
         {
-            Form1 qlct = new Form1();
+            LietKeChiTieu qlct = new LietKeChiTieu();
             qlct.Show();
         }
 
