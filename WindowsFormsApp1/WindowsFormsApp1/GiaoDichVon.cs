@@ -12,7 +12,6 @@ using System.Data.SqlClient;
 using System.Configuration;
 using System.Globalization;
 
-
 namespace WindowsFormsApp1
 {
     public partial class GiaoDichVon : Form
@@ -22,8 +21,8 @@ namespace WindowsFormsApp1
         //server explorer, datenverbindungen, Eigenschaften -> Verbindungszeichenfolge
         private const string str = "Data Source=BIB-LHOX\\CONEXIO;Initial Catalog=Testdb;Integrated Security=True";
 
-        enum MenhGia { euro = 1, usd, vnd };
-        enum LoaiGiaoDich { them = 1, thoai};
+        enum MenhGia { nothing = -1, euro, usd, vnd };
+        enum LoaiGiaoDich { nothing = -1, them, thoai};
 
         public GiaoDichVon()
         {
@@ -32,17 +31,19 @@ namespace WindowsFormsApp1
 
         private void GiaoDichVon_Load(object sender, EventArgs e)
         {
-            // TODO: Diese Codezeile lädt Daten in die Tabelle "testdbDataSetGiaoDichVon.GiaoDichVon". Sie können sie bei Bedarf verschieben oder entfernen.
-            this.giaoDichVonTableAdapter.Fill(this.testdbDataSetGiaoDichVon.GiaoDichVon);
+            // TODO: Diese Codezeile lädt Daten in die Tabelle "gDV.GiaoDichVon". Sie können sie bei Bedarf verschieben oder entfernen.
+            this.giaoDichVonTableAdapter.Fill(this.gDV.GiaoDichVon);
+            // TODO: Diese Codezeile lädt Daten in die Tabelle "gDV.GiaoDichVon". Sie können sie bei Bedarf verschieben oder entfernen.
+            this.giaoDichVonTableAdapter.Fill(this.gDV.GiaoDichVon);
         }
 
         private void btThem_Click(object sender, EventArgs e)
         {
-            if (cbLoaiGiaoDichVon.SelectedIndex != 0)
+            if ((LoaiGiaoDich)cbLoaiGiaoDichVon.SelectedIndex == LoaiGiaoDich.nothing)
             {
                 MessageBox.Show("Vui lòng chọn loại giao dịch vốn", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (cbMenhGia.SelectedIndex != 0)
+            else if ((MenhGia)cbMenhGia.SelectedIndex == MenhGia.nothing)
             {
                 MessageBox.Show("Vui lòng chọn loại tiền", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -56,7 +57,49 @@ namespace WindowsFormsApp1
 
         private void btXoa_Click(object sender, EventArgs e)
         {
+            if (this.dgvGiaoDichVon.SelectedRows.Count > 0)
+            {
+                if(dgvGiaoDichVon.SelectedRows[0].Index != dgvGiaoDichVon.NewRowIndex)
+                {
+                    using (SqlConnection conn = new SqlConnection(str))
+                    {
+                        using (SqlCommand cmd = new SqlCommand())
+                        {
+                            cmd.Connection = conn;
+                            cmd.CommandText = "Delete from GiaoDichVon where Date = @Date";
+                            cmd.Parameters.Add(new SqlParameter("@Date", SqlDbType.DateTime));
 
+                            try
+                            {
+                                conn.Open();
+                            }
+                            catch (Exception exc)
+                            {
+                                Console.WriteLine(exc.ToString());
+                            }
+                            cmd.Parameters["@Date"].Value = Convert.ToDateTime(dgvGiaoDichVon.SelectedRows[0].Cells[1].Value);
+
+                            cmd.ExecuteNonQuery();
+
+                            try
+                            {
+                                conn.Close();
+                            }
+                            catch (Exception exc)
+                            {
+                                Console.WriteLine(exc.ToString());
+                            }
+                        }
+                    }
+
+                    dgvGiaoDichVon.Rows.RemoveAt(this.dgvGiaoDichVon.SelectedRows[0].Index);
+                }
+               
+            }
+            else
+            {
+                MessageBox.Show("Hãy chọn một dòng để xóa", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void insert_gdv()
@@ -68,7 +111,7 @@ namespace WindowsFormsApp1
                     cmd.Connection = conn;
                     cmd.CommandText = "insert into GiaoDichVon(Type,Date,Amount,Currency,Note) values(@Type, @Date, @Amount, @Currency, @Note)";
                     cmd.Parameters.Add(new SqlParameter("@Type", SqlDbType.VarChar));
-                    cmd.Parameters.Add(new SqlParameter("@Date", SqlDbType.Date));
+                    cmd.Parameters.Add(new SqlParameter("@Date", SqlDbType.DateTime));
                     cmd.Parameters.Add(new SqlParameter("@Amount", SqlDbType.Decimal));
                     cmd.Parameters.Add(new SqlParameter("@Currency", SqlDbType.VarChar));
                     cmd.Parameters.Add(new SqlParameter("@Note", SqlDbType.VarChar));
@@ -83,10 +126,11 @@ namespace WindowsFormsApp1
                     }
 
                     cmd.Parameters["@Type"].Value = cbLoaiGiaoDichVon.SelectedItem.ToString();
-                    cmd.Parameters["@Date"].Value = dtpGiaoDichVon.Value.Date;
+                    cmd.Parameters["@Date"].Value = dtpGDV_D.Value;
                     cmd.Parameters["@Amount"].Value = nudGiaoDichVon.Value;
                     cmd.Parameters["@Currency"].Value = cbMenhGia.SelectedItem.ToString();
                     cmd.Parameters["@Note"].Value = tbNote.Text;
+
                     cmd.ExecuteNonQuery();
 
                     try
@@ -210,7 +254,18 @@ namespace WindowsFormsApp1
                     {
                         while (reader.Read())
                         {
-                            ketqua = Decimal.Parse(reader["Amount"].ToString());
+                            string tempo_kq;
+                            tempo_kq = reader["Amount"].ToString();
+                            if (String.IsNullOrEmpty(tempo_kq))
+                            {
+                                ketqua = 0;
+                            }
+                            else
+                            {
+                                ketqua = Decimal.Parse(reader["Amount"].ToString());
+                            }
+
+                                
                         }
                     }
                   
@@ -232,7 +287,7 @@ namespace WindowsFormsApp1
 
         private void update_datagridview()
         {
-            this.giaoDichVonTableAdapter.Fill(this.testdbDataSetGiaoDichVon.GiaoDichVon);
+            this.giaoDichVonTableAdapter.Fill(this.gDV.GiaoDichVon);
         }
 
 

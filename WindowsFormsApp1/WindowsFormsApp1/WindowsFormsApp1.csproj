@@ -58,6 +58,16 @@
     <Compile Include="DauTu.Designer.cs">
       <DependentUpon>DauTu.cs</DependentUpon>
     </Compile>
+    <Compile Include="GDV.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GDV.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="gDV1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>gDV1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="GiaoDichVon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,11 +78,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TestdbDataSet4.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="TestdbDataSetGiaoDichVon.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TestdbDataSetGiaoDichVon.xsd</DependentUpon>
     </Compile>
     <Compile Include="Trang_Chinh.cs">
       <SubType>Form</SubType>
@@ -103,6 +108,28 @@
     <EmbeddedResource Include="Trang_Chinh.resx">
       <DependentUpon>Trang_Chinh.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="GDV.xsc">
+      <DependentUpon>GDV.xsd</DependentUpon>
+    </None>
+    <None Include="GDV.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GDV.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GDV.xss">
+      <DependentUpon>GDV.xsd</DependentUpon>
+    </None>
+    <None Include="gDV1.xsc">
+      <DependentUpon>gDV1.xsd</DependentUpon>
+    </None>
+    <None Include="gDV1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>gDV1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="gDV1.xss">
+      <DependentUpon>gDV1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -122,17 +149,6 @@
     </None>
     <None Include="TestdbDataSet4.xss">
       <DependentUpon>TestdbDataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="TestdbDataSetGiaoDichVon.xsc">
-      <DependentUpon>TestdbDataSetGiaoDichVon.xsd</DependentUpon>
-    </None>
-    <None Include="TestdbDataSetGiaoDichVon.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TestdbDataSetGiaoDichVon.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="TestdbDataSetGiaoDichVon.xss">
-      <DependentUpon>TestdbDataSetGiaoDichVon.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

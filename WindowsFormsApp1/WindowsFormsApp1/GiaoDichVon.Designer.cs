@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.cbLoaiGiaoDichVon = new System.Windows.Forms.ComboBox();
             this.nudGiaoDichVon = new System.Windows.Forms.NumericUpDown();
-            this.dtpGiaoDichVon = new System.Windows.Forms.DateTimePicker();
+            this.dtpGDV_D = new System.Windows.Forms.DateTimePicker();
             this.dgvGiaoDichVon = new System.Windows.Forms.DataGridView();
             this.btThem = new System.Windows.Forms.Button();
             this.btXoa = new System.Windows.Forms.Button();
@@ -56,9 +56,9 @@
             this.lbeuro = new System.Windows.Forms.Label();
             this.lbusd = new System.Windows.Forms.Label();
             this.lbvnd = new System.Windows.Forms.Label();
-            this.testdbDataSetGiaoDichVon = new WindowsFormsApp1.TestdbDataSetGiaoDichVon();
+            this.gDV = new WindowsFormsApp1.gDV();
             this.giaoDichVonBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.giaoDichVonTableAdapter = new WindowsFormsApp1.TestdbDataSetGiaoDichVonTableAdapters.GiaoDichVonTableAdapter();
+            this.giaoDichVonTableAdapter = new WindowsFormsApp1.gDVTableAdapters.GiaoDichVonTableAdapter();
             this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,12 +66,13 @@
             this.noteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.nudGiaoDichVon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGiaoDichVon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.testdbDataSetGiaoDichVon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gDV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.giaoDichVonBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // cbLoaiGiaoDichVon
             // 
+            this.cbLoaiGiaoDichVon.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbLoaiGiaoDichVon.FormattingEnabled = true;
             this.cbLoaiGiaoDichVon.Items.AddRange(new object[] {
             "Thêm Vốn",
@@ -99,13 +100,13 @@
             this.nudGiaoDichVon.Size = new System.Drawing.Size(100, 22);
             this.nudGiaoDichVon.TabIndex = 1;
             // 
-            // dtpGiaoDichVon
+            // dtpGDV_D
             // 
-            this.dtpGiaoDichVon.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpGiaoDichVon.Location = new System.Drawing.Point(499, 98);
-            this.dtpGiaoDichVon.Name = "dtpGiaoDichVon";
-            this.dtpGiaoDichVon.Size = new System.Drawing.Size(125, 22);
-            this.dtpGiaoDichVon.TabIndex = 2;
+            this.dtpGDV_D.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpGDV_D.Location = new System.Drawing.Point(499, 98);
+            this.dtpGDV_D.Name = "dtpGDV_D";
+            this.dtpGDV_D.Size = new System.Drawing.Size(125, 22);
+            this.dtpGDV_D.TabIndex = 2;
             // 
             // dgvGiaoDichVon
             // 
@@ -120,6 +121,7 @@
             this.noteDataGridViewTextBoxColumn});
             this.dgvGiaoDichVon.DataSource = this.giaoDichVonBindingSource;
             this.dgvGiaoDichVon.Location = new System.Drawing.Point(100, 318);
+            this.dgvGiaoDichVon.MultiSelect = false;
             this.dgvGiaoDichVon.Name = "dgvGiaoDichVon";
             this.dgvGiaoDichVon.RowTemplate.Height = 24;
             this.dgvGiaoDichVon.Size = new System.Drawing.Size(1150, 500);
@@ -127,7 +129,7 @@
             // 
             // btThem
             // 
-            this.btThem.Location = new System.Drawing.Point(666, 97);
+            this.btThem.Location = new System.Drawing.Point(666, 98);
             this.btThem.Name = "btThem";
             this.btThem.Size = new System.Drawing.Size(75, 23);
             this.btThem.TabIndex = 4;
@@ -137,7 +139,7 @@
             // 
             // btXoa
             // 
-            this.btXoa.Location = new System.Drawing.Point(782, 97);
+            this.btXoa.Location = new System.Drawing.Point(782, 98);
             this.btXoa.Name = "btXoa";
             this.btXoa.Size = new System.Drawing.Size(75, 23);
             this.btXoa.TabIndex = 5;
@@ -165,6 +167,7 @@
             // 
             // cbMenhGia
             // 
+            this.cbMenhGia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMenhGia.FormattingEnabled = true;
             this.cbMenhGia.Items.AddRange(new object[] {
             "euro",
@@ -335,15 +338,15 @@
             this.lbvnd.TabIndex = 26;
             this.lbvnd.Text = "0,00";
             // 
-            // testdbDataSetGiaoDichVon
+            // gDV
             // 
-            this.testdbDataSetGiaoDichVon.DataSetName = "TestdbDataSetGiaoDichVon";
-            this.testdbDataSetGiaoDichVon.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.gDV.DataSetName = "gDV";
+            this.gDV.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // giaoDichVonBindingSource
             // 
             this.giaoDichVonBindingSource.DataMember = "GiaoDichVon";
-            this.giaoDichVonBindingSource.DataSource = this.testdbDataSetGiaoDichVon;
+            this.giaoDichVonBindingSource.DataSource = this.gDV;
             // 
             // giaoDichVonTableAdapter
             // 
@@ -408,7 +411,7 @@
             this.Controls.Add(this.btXoa);
             this.Controls.Add(this.btThem);
             this.Controls.Add(this.dgvGiaoDichVon);
-            this.Controls.Add(this.dtpGiaoDichVon);
+            this.Controls.Add(this.dtpGDV_D);
             this.Controls.Add(this.nudGiaoDichVon);
             this.Controls.Add(this.cbLoaiGiaoDichVon);
             this.Name = "GiaoDichVon";
@@ -416,7 +419,7 @@
             this.Load += new System.EventHandler(this.GiaoDichVon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudGiaoDichVon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGiaoDichVon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.testdbDataSetGiaoDichVon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gDV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.giaoDichVonBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -427,7 +430,7 @@
 
         private System.Windows.Forms.ComboBox cbLoaiGiaoDichVon;
         private System.Windows.Forms.NumericUpDown nudGiaoDichVon;
-        private System.Windows.Forms.DateTimePicker dtpGiaoDichVon;
+        private System.Windows.Forms.DateTimePicker dtpGDV_D;
         private System.Windows.Forms.DataGridView dgvGiaoDichVon;
         private System.Windows.Forms.Button btThem;
         private System.Windows.Forms.Button btXoa;
@@ -452,9 +455,9 @@
         private System.Windows.Forms.Label lbeuro;
         private System.Windows.Forms.Label lbusd;
         private System.Windows.Forms.Label lbvnd;
-        private TestdbDataSetGiaoDichVon testdbDataSetGiaoDichVon;
+        private gDV gDV;
         private System.Windows.Forms.BindingSource giaoDichVonBindingSource;
-        private TestdbDataSetGiaoDichVonTableAdapters.GiaoDichVonTableAdapter giaoDichVonTableAdapter;
+        private gDVTableAdapters.GiaoDichVonTableAdapter giaoDichVonTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;
