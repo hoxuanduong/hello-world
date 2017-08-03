@@ -65,7 +65,7 @@ namespace WindowsFormsApp1
                         {
                             cmd.Connection = conn;
                             cmd.CommandText = "Delete from TestTable where Product=@Product and Date = @Date";
-                            cmd.Parameters.Add(new SqlParameter("@Product", SqlDbType.VarChar));
+                            cmd.Parameters.Add(new SqlParameter("@Product", SqlDbType.NVarChar));
                             cmd.Parameters.Add(new SqlParameter("@Date", SqlDbType.Date));
 
                             try
@@ -175,9 +175,9 @@ namespace WindowsFormsApp1
                     cmd.Connection = conn;
                     cmd.CommandText = "insert into TestTable(Date,Product,Manufacturer,Place,Price) values(@Date, @Product, @Manufacturer, @Place, @Price)";
                     cmd.Parameters.Add(new SqlParameter("@Date", SqlDbType.Date));
-                    cmd.Parameters.Add(new SqlParameter("@Product", SqlDbType.VarChar));
-                    cmd.Parameters.Add(new SqlParameter("@Manufacturer", SqlDbType.VarChar));
-                    cmd.Parameters.Add(new SqlParameter("@Place", SqlDbType.VarChar));
+                    cmd.Parameters.Add(new SqlParameter("@Product", SqlDbType.NVarChar));
+                    cmd.Parameters.Add(new SqlParameter("@Manufacturer", SqlDbType.NVarChar));
+                    cmd.Parameters.Add(new SqlParameter("@Place", SqlDbType.NVarChar));
                     cmd.Parameters.Add(new SqlParameter("@Price", SqlDbType.Real));
 
                     try

@@ -39,7 +39,7 @@
             this.currencyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.noteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.giaoDichVonBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gDV = new WindowsFormsApp1.gDV();
+            this.GDV = new WindowsFormsApp1.gDV();
             this.btThem = new System.Windows.Forms.Button();
             this.btXoa = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -67,19 +67,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudGiaoDichVon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGiaoDichVon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.giaoDichVonBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gDV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GDV)).BeginInit();
             this.SuspendLayout();
             // 
             // cbLoaiGiaoDichVon
             // 
             this.cbLoaiGiaoDichVon.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbLoaiGiaoDichVon.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbLoaiGiaoDichVon.FormattingEnabled = true;
             this.cbLoaiGiaoDichVon.Items.AddRange(new object[] {
             "Thêm Vốn",
-            "Thoái Vốn"});
+            "Thoai Von"});
             this.cbLoaiGiaoDichVon.Location = new System.Drawing.Point(100, 96);
             this.cbLoaiGiaoDichVon.Name = "cbLoaiGiaoDichVon";
-            this.cbLoaiGiaoDichVon.Size = new System.Drawing.Size(121, 24);
+            this.cbLoaiGiaoDichVon.Size = new System.Drawing.Size(121, 26);
             this.cbLoaiGiaoDichVon.TabIndex = 0;
             // 
             // nudGiaoDichVon
@@ -126,7 +127,6 @@
             this.dgvGiaoDichVon.RowTemplate.Height = 24;
             this.dgvGiaoDichVon.Size = new System.Drawing.Size(1150, 500);
             this.dgvGiaoDichVon.TabIndex = 3;
-            this.dgvGiaoDichVon.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvGiaoDichVon_RowsAdded);
             // 
             // typeDataGridViewTextBoxColumn
             // 
@@ -161,12 +161,13 @@
             // giaoDichVonBindingSource
             // 
             this.giaoDichVonBindingSource.DataMember = "GiaoDichVon";
-            this.giaoDichVonBindingSource.DataSource = this.gDV;
+            this.giaoDichVonBindingSource.DataSource = this.GDV;
+            this.giaoDichVonBindingSource.ListChanged += new System.ComponentModel.ListChangedEventHandler(this.giaoDichVonBindingSource_ListChanged);
             // 
-            // gDV
+            // GDV
             // 
-            this.gDV.DataSetName = "gDV";
-            this.gDV.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.GDV.DataSetName = "GDV";
+            this.GDV.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btThem
             // 
@@ -174,7 +175,7 @@
             this.btThem.Name = "btThem";
             this.btThem.Size = new System.Drawing.Size(75, 23);
             this.btThem.TabIndex = 4;
-            this.btThem.Text = "Thêm";
+            this.btThem.Text = "&Thêm";
             this.btThem.UseVisualStyleBackColor = true;
             this.btThem.Click += new System.EventHandler(this.btThem_Click);
             // 
@@ -184,7 +185,7 @@
             this.btXoa.Name = "btXoa";
             this.btXoa.Size = new System.Drawing.Size(75, 23);
             this.btXoa.TabIndex = 5;
-            this.btXoa.Text = "Xóa";
+            this.btXoa.Text = "&Xóa";
             this.btXoa.UseVisualStyleBackColor = true;
             this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
             // 
@@ -239,10 +240,11 @@
             // 
             // tbNote
             // 
+            this.tbNote.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNote.Location = new System.Drawing.Point(100, 159);
             this.tbNote.MaxLength = 50;
             this.tbNote.Name = "tbNote";
-            this.tbNote.Size = new System.Drawing.Size(757, 22);
+            this.tbNote.Size = new System.Drawing.Size(757, 25);
             this.tbNote.TabIndex = 11;
             // 
             // label5
@@ -257,12 +259,15 @@
             // cbXemTatCa
             // 
             this.cbXemTatCa.AutoSize = true;
+            this.cbXemTatCa.Checked = true;
+            this.cbXemTatCa.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbXemTatCa.Location = new System.Drawing.Point(100, 249);
             this.cbXemTatCa.Name = "cbXemTatCa";
             this.cbXemTatCa.Size = new System.Drawing.Size(97, 20);
             this.cbXemTatCa.TabIndex = 13;
             this.cbXemTatCa.Text = "Xem Tất Cả";
             this.cbXemTatCa.UseVisualStyleBackColor = true;
+            this.cbXemTatCa.CheckedChanged += new System.EventHandler(this.cbXemTatCa_CheckedChanged);
             // 
             // label6
             // 
@@ -293,6 +298,7 @@
             // 
             // dtpTu
             // 
+            this.dtpTu.Enabled = false;
             this.dtpTu.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpTu.Location = new System.Drawing.Point(298, 279);
             this.dtpTu.Name = "dtpTu";
@@ -301,6 +307,7 @@
             // 
             // dtpDen
             // 
+            this.dtpDen.Enabled = false;
             this.dtpDen.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDen.Location = new System.Drawing.Point(483, 279);
             this.dtpDen.Name = "dtpDen";
@@ -309,12 +316,14 @@
             // 
             // btLoc
             // 
+            this.btLoc.Enabled = false;
             this.btLoc.Location = new System.Drawing.Point(666, 243);
             this.btLoc.Name = "btLoc";
             this.btLoc.Size = new System.Drawing.Size(75, 23);
             this.btLoc.TabIndex = 19;
-            this.btLoc.Text = "Lọc";
+            this.btLoc.Text = "&Lọc";
             this.btLoc.UseVisualStyleBackColor = true;
+            this.btLoc.Click += new System.EventHandler(this.btLoc_Click);
             // 
             // label9
             // 
@@ -422,7 +431,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudGiaoDichVon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGiaoDichVon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.giaoDichVonBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gDV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GDV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -457,7 +466,7 @@
         private System.Windows.Forms.Label lbeuro;
         private System.Windows.Forms.Label lbusd;
         private System.Windows.Forms.Label lbvnd;
-        private gDV gDV;
+        private gDV GDV;
         private System.Windows.Forms.BindingSource giaoDichVonBindingSource;
         private gDVTableAdapters.GiaoDichVonTableAdapter giaoDichVonTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;

@@ -18,3 +18,7 @@ C:\Users\XuanDuong.Ho\Desktop\Git hello world\hello-world\WindowsFormsApp1\Windo
 C:\Users\XuanDuong.Ho\Desktop\Git hello world\hello-world\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.DauTu.resources
 C:\Users\XuanDuong.Ho\Desktop\Git hello world\hello-world\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.GiaoDichVon.resources
 C:\Users\XuanDuong.Ho\Desktop\Git hello world\hello-world\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.LietKeChiTieu.resources
+C:\Users\XuanDuong.Ho\Desktop\Git hello world\hello-world\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.NhapNgonNgu.resources
+C:\Users\XuanDuong.Ho\Desktop\Git hello world\hello-world\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Resource.en.resources
+C:\Users\XuanDuong.Ho\Desktop\Git hello world\hello-world\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Resource.vi.resources
+C:\Users\XuanDuong.Ho\Desktop\Git hello world\hello-world\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Resource.de.resources

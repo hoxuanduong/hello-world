@@ -27,14 +27,17 @@ namespace WindowsFormsApp1
         public GiaoDichVon()
         {
             InitializeComponent();
+            this.dgvGiaoDichVon.DefaultCellStyle.Font = new Font("Arial Unicode MS", 10);
+            
+
         }
 
         private void GiaoDichVon_Load(object sender, EventArgs e)
         {
             // TODO: Diese Codezeile lädt Daten in die Tabelle "gDV.GiaoDichVon". Sie können sie bei Bedarf verschieben oder entfernen.
-            this.giaoDichVonTableAdapter.Fill(this.gDV.GiaoDichVon);
+            this.giaoDichVonTableAdapter.Fill(this.GDV.GiaoDichVon);
             // TODO: Diese Codezeile lädt Daten in die Tabelle "gDV.GiaoDichVon". Sie können sie bei Bedarf verschieben oder entfernen.
-            this.giaoDichVonTableAdapter.Fill(this.gDV.GiaoDichVon);
+            this.giaoDichVonTableAdapter.Fill(this.GDV.GiaoDichVon);
         }
 
         private void btThem_Click(object sender, EventArgs e)
@@ -110,11 +113,11 @@ namespace WindowsFormsApp1
                 {
                     cmd.Connection = conn;
                     cmd.CommandText = "insert into GiaoDichVon(Type,Date,Amount,Currency,Note) values(@Type, @Date, @Amount, @Currency, @Note)";
-                    cmd.Parameters.Add(new SqlParameter("@Type", SqlDbType.VarChar));
+                    cmd.Parameters.Add(new SqlParameter("@Type", SqlDbType.NVarChar));
                     cmd.Parameters.Add(new SqlParameter("@Date", SqlDbType.DateTime));
                     cmd.Parameters.Add(new SqlParameter("@Amount", SqlDbType.Decimal));
-                    cmd.Parameters.Add(new SqlParameter("@Currency", SqlDbType.VarChar));
-                    cmd.Parameters.Add(new SqlParameter("@Note", SqlDbType.VarChar));
+                    cmd.Parameters.Add(new SqlParameter("@Currency", SqlDbType.NVarChar));
+                    cmd.Parameters.Add(new SqlParameter("@Note", SqlDbType.NVarChar));
 
                     try
                     {
@@ -157,7 +160,7 @@ namespace WindowsFormsApp1
                     cmd.Connection = conn;
                     cmd.CommandText = "UPDATE TaiKhoanVon SET Amount = @amount Where Currency = @currency";
                     cmd.Parameters.Add(new SqlParameter("@amount", SqlDbType.Decimal));
-                    cmd.Parameters.Add(new SqlParameter("@currency", SqlDbType.VarChar));
+                    cmd.Parameters.Add(new SqlParameter("@currency", SqlDbType.NVarChar));
 
                     try
                     {
@@ -223,7 +226,7 @@ namespace WindowsFormsApp1
 
                     cmd.Connection = conn;
                     cmd.CommandText = "SELECT * from TaiKhoanVon Where Currency = @currency";
-                    cmd.Parameters.Add(new SqlParameter("@currency", SqlDbType.VarChar));
+                    cmd.Parameters.Add(new SqlParameter("@currency", SqlDbType.NVarChar));
 
                     switch (lgd)
                     {
@@ -287,26 +290,54 @@ namespace WindowsFormsApp1
 
         private void update_datagridview()
         {
-            this.giaoDichVonTableAdapter.Fill(this.gDV.GiaoDichVon);
+            this.giaoDichVonTableAdapter.Fill(this.GDV.GiaoDichVon);
         }
 
-        private void dgvGiaoDichVon_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        private void giaoDichVonBindingSource_ListChanged(object sender, ListChangedEventArgs e)
         {
-            //DataGridViewRow row = dgvGiaoDichVon.Rows[e.RowIndex];
+            foreach (DataGridViewRow row in dgvGiaoDichVon.Rows)
+            {
 
-            //if ((LoaiGiaoDich)cbLoaiGiaoDichVon.SelectedIndex == LoaiGiaoDich.them)
-            //{
+                if (row.Index != dgvGiaoDichVon.NewRowIndex) //this condition is very important, otherwise always have error null object of the newline
+                {
+                    //the string read from cell contain a space at the end -> before compare remove this space
+                    if (row.Cells[0].Value.ToString().TrimEnd().Equals(cbLoaiGiaoDichVon.Items[0]))
+                    {
+                        row.DefaultCellStyle.ForeColor = Color.Green;
+                    }
+                    else if (row.Cells[0].Value.ToString().TrimEnd().Equals(cbLoaiGiaoDichVon.Items[1]))
+                    {
+                        row.DefaultCellStyle.ForeColor = Color.Red;
+                    }
+                    else
+                    {
+                        row.DefaultCellStyle.ForeColor = Color.Purple;
+                    }
 
-            //    row.DefaultCellStyle.ForeColor = Color.Green;
-
-            //}
-            //else if ((LoaiGiaoDich)cbLoaiGiaoDichVon.SelectedIndex == LoaiGiaoDich.thoai)
-            //{
-
-            //    row.DefaultCellStyle.ForeColor = Color.Red;
-
-            //}
+                }
+                
+            }
         }
 
+        private void cbXemTatCa_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbXemTatCa.Checked)
+            {
+                dtpTu.Enabled = false;
+                dtpDen.Enabled = false;
+                btLoc.Enabled = false;
+            }
+            else
+            {
+                dtpTu.Enabled = true;
+                dtpDen.Enabled = true;
+                btLoc.Enabled = true;
+            }
         }
+
+        private void btLoc_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

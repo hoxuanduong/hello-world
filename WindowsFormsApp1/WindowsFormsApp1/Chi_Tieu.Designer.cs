@@ -121,7 +121,7 @@
             this.btThem.Name = "btThem";
             this.btThem.Size = new System.Drawing.Size(100, 28);
             this.btThem.TabIndex = 5;
-            this.btThem.Text = "Thêm";
+            this.btThem.Text = "&Thêm";
             this.btThem.UseVisualStyleBackColor = true;
             this.btThem.Click += new System.EventHandler(this.btThem_Click);
             // 
@@ -162,7 +162,7 @@
             this.btXoa.Name = "btXoa";
             this.btXoa.Size = new System.Drawing.Size(100, 28);
             this.btXoa.TabIndex = 6;
-            this.btXoa.Text = "Xóa";
+            this.btXoa.Text = "&Xóa";
             this.btXoa.UseVisualStyleBackColor = true;
             this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
             // 
@@ -351,7 +351,7 @@
             this.btLoc.Name = "btLoc";
             this.btLoc.Size = new System.Drawing.Size(100, 28);
             this.btLoc.TabIndex = 23;
-            this.btLoc.Text = "Lọc";
+            this.btLoc.Text = "&Lọc";
             this.btLoc.UseVisualStyleBackColor = true;
             this.btLoc.Click += new System.EventHandler(this.btLoc_Click);
             // 

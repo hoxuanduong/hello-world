@@ -117,16 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="giaoDichVonBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>92, 17</value>
-  </metadata>
-  <metadata name="GDV.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="giaoDichVonTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>292, 17</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>211</value>
-  </metadata>
+  <data name="btqlct" xml:space="preserve">
+    <value>Expense</value>
+  </data>
+  <data name="btqlcvlh" xml:space="preserve">
+    <value>Appointment</value>
+  </data>
+  <data name="btqldt" xml:space="preserve">
+    <value>Investment</value>
+  </data>
+  <data name="btqlgt" xml:space="preserve">
+    <value>Paper</value>
+  </data>
+  <data name="btqlhd" xml:space="preserve">
+    <value>Contract</value>
+  </data>
+  <data name="btqltn" xml:space="preserve">
+    <value>Income</value>
+  </data>
+  <data name="mnctr" xml:space="preserve">
+    <value>Program</value>
+  </data>
+  <data name="mnnn" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="mntrg" xml:space="preserve">
+    <value>Help</value>
+  </data>
 </root>

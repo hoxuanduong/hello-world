@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="yes"?>
+<DuLieuNN xmlns="http://tempuri.org/DuLieuNN.xsd">
+  <NgonNgu>
+    <ID>0001</ID>
+    <English>hello</English>
+    <Vietnamese>xin chào</Vietnamese>
+    <German>hallo</German>
+  </NgonNgu>
+  <NgonNgu>
+    <ID>0002</ID>
+    <English>goodbye</English>
+    <Vietnamese>tạm biệt</Vietnamese>
+    <German>aufwiedersehen</German>
+  </NgonNgu>
+</DuLieuNN>
