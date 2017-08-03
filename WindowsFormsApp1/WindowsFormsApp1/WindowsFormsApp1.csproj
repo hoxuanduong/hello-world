@@ -98,20 +98,20 @@
     <Compile Include="NhapNgonNgu.Designer.cs">
       <DependentUpon>NhapNgonNgu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Resource\de.Designer.cs">
+    <Compile Include="Resource\resources.de.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>de.resx</DependentUpon>
+      <DependentUpon>resources.de.resx</DependentUpon>
     </Compile>
-    <Compile Include="Resource\en.Designer.cs">
+    <Compile Include="Resource\resources.en.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>en.resx</DependentUpon>
+      <DependentUpon>resources.en.resx</DependentUpon>
     </Compile>
-    <Compile Include="Resource\vi.Designer.cs">
+    <Compile Include="Resource\resources.vi.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>vi.resx</DependentUpon>
+      <DependentUpon>resources.vi.resx</DependentUpon>
     </Compile>
     <Compile Include="TestdbDataSet4.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -147,17 +147,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Resource\de.resx">
+    <EmbeddedResource Include="Resource\resources.de.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>de.Designer.cs</LastGenOutput>
+      <LastGenOutput>resources.de.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resource\en.resx">
+    <EmbeddedResource Include="Resource\resources.en.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>en.Designer.cs</LastGenOutput>
+      <LastGenOutput>resources.en.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resource\vi.resx">
+    <EmbeddedResource Include="Resource\resources.vi.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>vi.Designer.cs</LastGenOutput>
+      <LastGenOutput>resources.vi.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Trang_Chinh.resx">
       <DependentUpon>Trang_Chinh.cs</DependentUpon>

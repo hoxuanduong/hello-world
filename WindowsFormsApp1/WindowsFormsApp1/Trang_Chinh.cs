@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WindowsFormsApp1.Resource;
+
 
 namespace WindowsFormsApp1
 {
@@ -63,8 +63,8 @@ namespace WindowsFormsApp1
             //{
             //    this.btQlct.Text = rm.GetString("0001");
             //}
-            Assembly a = Assembly.Load("WindowsFormsApp1");
-            res_man = new ResourceManager("WindowsFormsApp1.Resource",a);
+           
+            res_man = new ResourceManager("WindowsFormsApp1.Resource.resources", Assembly.GetExecutingAssembly());
             this.btQlct.Text = res_man.GetString("btqlct",cul);
             this.btQldt.Text = res_man.GetString("btqldt", cul);
             this.btQltn.Text = res_man.GetString("btqltn", cul);

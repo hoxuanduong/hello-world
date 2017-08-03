@@ -22,3 +22,24 @@ C:\Users\XuanDuong.Ho\Desktop\Git hello world\hello-world\WindowsFormsApp1\Windo
 C:\Users\XuanDuong.Ho\Desktop\Git hello world\hello-world\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Resource.en.resources
 C:\Users\XuanDuong.Ho\Desktop\Git hello world\hello-world\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Resource.vi.resources
 C:\Users\XuanDuong.Ho\Desktop\Git hello world\hello-world\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Resource.de.resources
+C:\Users\xuand\Documents\GitHub\hello-world\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\xuand\Documents\GitHub\hello-world\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\xuand\Documents\GitHub\hello-world\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\xuand\Documents\GitHub\hello-world\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.LietKeChiTieu.resources
+C:\Users\xuand\Documents\GitHub\hello-world\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.DauTu.resources
+C:\Users\xuand\Documents\GitHub\hello-world\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.GiaoDichVon.resources
+C:\Users\xuand\Documents\GitHub\hello-world\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.NhapNgonNgu.resources
+C:\Users\xuand\Documents\GitHub\hello-world\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\xuand\Documents\GitHub\hello-world\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Main.resources
+C:\Users\xuand\Documents\GitHub\hello-world\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.Cache
+C:\Users\xuand\Documents\GitHub\hello-world\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\xuand\Documents\GitHub\hello-world\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\xuand\Documents\GitHub\hello-world\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Resource.resources.de.resources
+C:\Users\xuand\Documents\GitHub\hello-world\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Resource.resources.en.resources
+C:\Users\xuand\Documents\GitHub\hello-world\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Resource.resources.vi.resources
+C:\Users\xuand\Documents\GitHub\hello-world\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\de\WindowsFormsApp1.resources.dll
+C:\Users\xuand\Documents\GitHub\hello-world\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\en\WindowsFormsApp1.resources.dll
+C:\Users\xuand\Documents\GitHub\hello-world\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\vi\WindowsFormsApp1.resources.dll
+C:\Users\xuand\Documents\GitHub\hello-world\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\de\WindowsFormsApp1.resources.dll
+C:\Users\xuand\Documents\GitHub\hello-world\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\en\WindowsFormsApp1.resources.dll
+C:\Users\xuand\Documents\GitHub\hello-world\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\vi\WindowsFormsApp1.resources.dll
