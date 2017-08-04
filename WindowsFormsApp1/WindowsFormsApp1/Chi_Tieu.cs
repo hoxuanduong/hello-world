@@ -136,9 +136,31 @@ namespace WindowsFormsApp1
         {
             // TODO: Diese Codezeile lädt Daten in die Tabelle "testdbDataSet4.TestTable". Sie können sie bei Bedarf verschieben oder entfernen.
             this.testTableTableAdapter.Fill(this.testdbDataSet4.TestTable);
+            update_UI_ChiTieu();
 
         }
 
+        private void update_UI_ChiTieu()
+        {
+            this.lbTenHang.Text = Global_Class.Language.res_man.GetString("lbTenHang", Global_Class.Language.cul);
+            this.lbHSX.Text = Global_Class.Language.res_man.GetString("lbHSX", Global_Class.Language.cul);
+            this.lbNoiMua.Text = Global_Class.Language.res_man.GetString("lbNoiMua", Global_Class.Language.cul);
+            this.lbNgayMua.Text = Global_Class.Language.res_man.GetString("lbNgayMua", Global_Class.Language.cul);
+            this.lbGia.Text = Global_Class.Language.res_man.GetString("lbGia", Global_Class.Language.cul);
+            this.lbTu.Text = Global_Class.Language.res_man.GetString("lbTu", Global_Class.Language.cul);
+            this.lbToi.Text = Global_Class.Language.res_man.GetString("lbToi", Global_Class.Language.cul);
+            this.cbXtc.Text = Global_Class.Language.res_man.GetString("cbXtc", Global_Class.Language.cul);
+            this.cbXtc.Text = Global_Class.Language.res_man.GetString("cbXtc", Global_Class.Language.cul);
+            this.btLoc.Text = Global_Class.Language.res_man.GetString("btLoc", Global_Class.Language.cul);
+            this.btThem.Text = Global_Class.Language.res_man.GetString("btThem", Global_Class.Language.cul);
+            this.btXoa.Text = Global_Class.Language.res_man.GetString("btXoa", Global_Class.Language.cul);
+            this.dataGridView1.Columns[0].HeaderText = Global_Class.Language.res_man.GetString("lbNgayMua", Global_Class.Language.cul);
+            this.dataGridView1.Columns[1].HeaderText = Global_Class.Language.res_man.GetString("lbTenHang", Global_Class.Language.cul);
+            this.dataGridView1.Columns[2].HeaderText = Global_Class.Language.res_man.GetString("lbHSX", Global_Class.Language.cul);
+            this.dataGridView1.Columns[3].HeaderText = Global_Class.Language.res_man.GetString("lbNoiMua", Global_Class.Language.cul);
+            this.dataGridView1.Columns[4].HeaderText = Global_Class.Language.res_man.GetString("lbGia", Global_Class.Language.cul);
+
+        }
         //delete TestTable form server database
         private void delete_database()
         {

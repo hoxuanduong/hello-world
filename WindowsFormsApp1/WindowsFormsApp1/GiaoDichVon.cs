@@ -27,7 +27,7 @@ namespace WindowsFormsApp1
         public GiaoDichVon()
         {
             InitializeComponent();
-            this.dgvGiaoDichVon.DefaultCellStyle.Font = new Font("Arial Unicode MS", 10);
+            this.dgvGiaoDichVon.DefaultCellStyle.Font = new Font("Arial Unicode MS", 9);
             
 
         }
@@ -36,9 +36,35 @@ namespace WindowsFormsApp1
         {
             // TODO: Diese Codezeile lädt Daten in die Tabelle "gDV.GiaoDichVon". Sie können sie bei Bedarf verschieben oder entfernen.
             this.giaoDichVonTableAdapter.Fill(this.GDV.GiaoDichVon);
-            // TODO: Diese Codezeile lädt Daten in die Tabelle "gDV.GiaoDichVon". Sie können sie bei Bedarf verschieben oder entfernen.
-            this.giaoDichVonTableAdapter.Fill(this.GDV.GiaoDichVon);
+            update_UI_GiaoDichVon();
+
         }
+
+        private void update_UI_GiaoDichVon()
+        {
+
+            this.lbLoaiGiaoDich.Text = Global_Class.Language.res_man.GetString("lbLoaiGiaoDich", Global_Class.Language.cul);
+            this.lbSoTien.Text = Global_Class.Language.res_man.GetString("lbSoTien", Global_Class.Language.cul);
+            this.lbMenhGia.Text = Global_Class.Language.res_man.GetString("lbMenhGia", Global_Class.Language.cul);
+            this.lbNgayGiaoDich.Text = Global_Class.Language.res_man.GetString("lbNgayGiaoDich", Global_Class.Language.cul);
+            this.lbGhiChu.Text = Global_Class.Language.res_man.GetString("lbGhiChu", Global_Class.Language.cul);
+            this.lbLichSuGdv.Text = Global_Class.Language.res_man.GetString("lbLichSuGdv", Global_Class.Language.cul);
+            this.lbTu.Text = Global_Class.Language.res_man.GetString("lbTu", Global_Class.Language.cul);
+            this.lbToi.Text = Global_Class.Language.res_man.GetString("lbToi", Global_Class.Language.cul);
+            this.cbXtc.Text = Global_Class.Language.res_man.GetString("cbXtc", Global_Class.Language.cul);
+
+            this.btLoc.Text = Global_Class.Language.res_man.GetString("btLoc", Global_Class.Language.cul);
+            this.btThem.Text = Global_Class.Language.res_man.GetString("btThem", Global_Class.Language.cul);
+            this.btXoa.Text = Global_Class.Language.res_man.GetString("btXoa", Global_Class.Language.cul);
+
+            this.dgvGiaoDichVon.Columns[0].HeaderText = Global_Class.Language.res_man.GetString("lbLoaiGiaoDich", Global_Class.Language.cul);
+            this.dgvGiaoDichVon.Columns[1].HeaderText = Global_Class.Language.res_man.GetString("lbNgayGiaoDich", Global_Class.Language.cul);
+            this.dgvGiaoDichVon.Columns[2].HeaderText = Global_Class.Language.res_man.GetString("lbSoTien", Global_Class.Language.cul);
+            this.dgvGiaoDichVon.Columns[3].HeaderText = Global_Class.Language.res_man.GetString("lbMenhGia", Global_Class.Language.cul);
+            this.dgvGiaoDichVon.Columns[4].HeaderText = Global_Class.Language.res_man.GetString("lbGhiChu", Global_Class.Language.cul);
+           
+        }
+
 
         private void btThem_Click(object sender, EventArgs e)
         {
@@ -321,7 +347,7 @@ namespace WindowsFormsApp1
 
         private void cbXemTatCa_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbXemTatCa.Checked)
+            if (cbXtc.Checked)
             {
                 dtpTu.Enabled = false;
                 dtpDen.Enabled = false;

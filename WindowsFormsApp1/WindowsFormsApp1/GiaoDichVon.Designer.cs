@@ -42,17 +42,17 @@
             this.GDV = new WindowsFormsApp1.gDV();
             this.btThem = new System.Windows.Forms.Button();
             this.btXoa = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbLoaiGiaoDich = new System.Windows.Forms.Label();
+            this.lbSoTien = new System.Windows.Forms.Label();
             this.cbMenhGia = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbMenhGia = new System.Windows.Forms.Label();
+            this.lbNgayGiaoDich = new System.Windows.Forms.Label();
             this.tbNote = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cbXemTatCa = new System.Windows.Forms.CheckBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lbGhiChu = new System.Windows.Forms.Label();
+            this.cbXtc = new System.Windows.Forms.CheckBox();
+            this.lbLichSuGdv = new System.Windows.Forms.Label();
+            this.lbTu = new System.Windows.Forms.Label();
+            this.lbToi = new System.Windows.Forms.Label();
             this.dtpTu = new System.Windows.Forms.DateTimePicker();
             this.dtpDen = new System.Windows.Forms.DateTimePicker();
             this.btLoc = new System.Windows.Forms.Button();
@@ -76,8 +76,8 @@
             this.cbLoaiGiaoDichVon.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbLoaiGiaoDichVon.FormattingEnabled = true;
             this.cbLoaiGiaoDichVon.Items.AddRange(new object[] {
-            "Thêm Vốn",
-            "Thoai Von"});
+            "+",
+            "-"});
             this.cbLoaiGiaoDichVon.Location = new System.Drawing.Point(100, 96);
             this.cbLoaiGiaoDichVon.Name = "cbLoaiGiaoDichVon";
             this.cbLoaiGiaoDichVon.Size = new System.Drawing.Size(121, 26);
@@ -189,23 +189,23 @@
             this.btXoa.UseVisualStyleBackColor = true;
             this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
             // 
-            // label1
+            // lbLoaiGiaoDich
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(100, 60);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 16);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Loại Giao Dịch:";
+            this.lbLoaiGiaoDich.AutoSize = true;
+            this.lbLoaiGiaoDich.Location = new System.Drawing.Point(100, 60);
+            this.lbLoaiGiaoDich.Name = "lbLoaiGiaoDich";
+            this.lbLoaiGiaoDich.Size = new System.Drawing.Size(99, 16);
+            this.lbLoaiGiaoDich.TabIndex = 6;
+            this.lbLoaiGiaoDich.Text = "Loại Giao Dịch:";
             // 
-            // label2
+            // lbSoTien
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(246, 61);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 16);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Số Tiền:";
+            this.lbSoTien.AutoSize = true;
+            this.lbSoTien.Location = new System.Drawing.Point(246, 61);
+            this.lbSoTien.Name = "lbSoTien";
+            this.lbSoTien.Size = new System.Drawing.Size(58, 16);
+            this.lbSoTien.TabIndex = 7;
+            this.lbSoTien.Text = "Số Tiền:";
             // 
             // cbMenhGia
             // 
@@ -220,23 +220,23 @@
             this.cbMenhGia.Size = new System.Drawing.Size(100, 24);
             this.cbMenhGia.TabIndex = 8;
             // 
-            // label3
+            // lbMenhGia
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(369, 60);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 16);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Mệnh Giá:";
+            this.lbMenhGia.AutoSize = true;
+            this.lbMenhGia.Location = new System.Drawing.Point(369, 60);
+            this.lbMenhGia.Name = "lbMenhGia";
+            this.lbMenhGia.Size = new System.Drawing.Size(68, 16);
+            this.lbMenhGia.TabIndex = 9;
+            this.lbMenhGia.Text = "Mệnh Giá:";
             // 
-            // label4
+            // lbNgayGiaoDich
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(496, 62);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(170, 16);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Ngày Thực Hiện Giao Dịch:";
+            this.lbNgayGiaoDich.AutoSize = true;
+            this.lbNgayGiaoDich.Location = new System.Drawing.Point(496, 62);
+            this.lbNgayGiaoDich.Name = "lbNgayGiaoDich";
+            this.lbNgayGiaoDich.Size = new System.Drawing.Size(170, 16);
+            this.lbNgayGiaoDich.TabIndex = 10;
+            this.lbNgayGiaoDich.Text = "Ngày Thực Hiện Giao Dịch:";
             // 
             // tbNote
             // 
@@ -247,54 +247,54 @@
             this.tbNote.Size = new System.Drawing.Size(757, 25);
             this.tbNote.TabIndex = 11;
             // 
-            // label5
+            // lbGhiChu
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(100, 140);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 16);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Ghi Chú:";
+            this.lbGhiChu.AutoSize = true;
+            this.lbGhiChu.Location = new System.Drawing.Point(100, 140);
+            this.lbGhiChu.Name = "lbGhiChu";
+            this.lbGhiChu.Size = new System.Drawing.Size(57, 16);
+            this.lbGhiChu.TabIndex = 12;
+            this.lbGhiChu.Text = "Ghi Chú:";
             // 
-            // cbXemTatCa
+            // cbXtc
             // 
-            this.cbXemTatCa.AutoSize = true;
-            this.cbXemTatCa.Checked = true;
-            this.cbXemTatCa.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbXemTatCa.Location = new System.Drawing.Point(100, 249);
-            this.cbXemTatCa.Name = "cbXemTatCa";
-            this.cbXemTatCa.Size = new System.Drawing.Size(97, 20);
-            this.cbXemTatCa.TabIndex = 13;
-            this.cbXemTatCa.Text = "Xem Tất Cả";
-            this.cbXemTatCa.UseVisualStyleBackColor = true;
-            this.cbXemTatCa.CheckedChanged += new System.EventHandler(this.cbXemTatCa_CheckedChanged);
+            this.cbXtc.AutoSize = true;
+            this.cbXtc.Checked = true;
+            this.cbXtc.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbXtc.Location = new System.Drawing.Point(100, 249);
+            this.cbXtc.Name = "cbXtc";
+            this.cbXtc.Size = new System.Drawing.Size(97, 20);
+            this.cbXtc.TabIndex = 13;
+            this.cbXtc.Text = "Xem Tất Cả";
+            this.cbXtc.UseVisualStyleBackColor = true;
+            this.cbXtc.CheckedChanged += new System.EventHandler(this.cbXemTatCa_CheckedChanged);
             // 
-            // label6
+            // lbLichSuGdv
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(100, 218);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(143, 16);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Lịch Sử Giao Dịch Vốn:";
+            this.lbLichSuGdv.AutoSize = true;
+            this.lbLichSuGdv.Location = new System.Drawing.Point(100, 218);
+            this.lbLichSuGdv.Name = "lbLichSuGdv";
+            this.lbLichSuGdv.Size = new System.Drawing.Size(143, 16);
+            this.lbLichSuGdv.TabIndex = 14;
+            this.lbLichSuGdv.Text = "Lịch Sử Giao Dịch Vốn:";
             // 
-            // label7
+            // lbTu
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(295, 250);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(27, 16);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Từ:";
+            this.lbTu.AutoSize = true;
+            this.lbTu.Location = new System.Drawing.Point(295, 250);
+            this.lbTu.Name = "lbTu";
+            this.lbTu.Size = new System.Drawing.Size(27, 16);
+            this.lbTu.TabIndex = 15;
+            this.lbTu.Text = "Từ:";
             // 
-            // label8
+            // lbToi
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(480, 249);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 16);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "Đến:";
+            this.lbToi.AutoSize = true;
+            this.lbToi.Location = new System.Drawing.Point(480, 249);
+            this.lbToi.Name = "lbToi";
+            this.lbToi.Size = new System.Drawing.Size(35, 16);
+            this.lbToi.TabIndex = 16;
+            this.lbToi.Text = "Đến:";
             // 
             // dtpTu
             // 
@@ -407,17 +407,17 @@
             this.Controls.Add(this.btLoc);
             this.Controls.Add(this.dtpDen);
             this.Controls.Add(this.dtpTu);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.cbXemTatCa);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lbToi);
+            this.Controls.Add(this.lbTu);
+            this.Controls.Add(this.lbLichSuGdv);
+            this.Controls.Add(this.cbXtc);
+            this.Controls.Add(this.lbGhiChu);
             this.Controls.Add(this.tbNote);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lbNgayGiaoDich);
+            this.Controls.Add(this.lbMenhGia);
             this.Controls.Add(this.cbMenhGia);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbSoTien);
+            this.Controls.Add(this.lbLoaiGiaoDich);
             this.Controls.Add(this.btXoa);
             this.Controls.Add(this.btThem);
             this.Controls.Add(this.dgvGiaoDichVon);
@@ -445,17 +445,17 @@
         private System.Windows.Forms.DataGridView dgvGiaoDichVon;
         private System.Windows.Forms.Button btThem;
         private System.Windows.Forms.Button btXoa;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbLoaiGiaoDich;
+        private System.Windows.Forms.Label lbSoTien;
         private System.Windows.Forms.ComboBox cbMenhGia;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbMenhGia;
+        private System.Windows.Forms.Label lbNgayGiaoDich;
         private System.Windows.Forms.TextBox tbNote;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.CheckBox cbXemTatCa;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lbGhiChu;
+        private System.Windows.Forms.CheckBox cbXtc;
+        private System.Windows.Forms.Label lbLichSuGdv;
+        private System.Windows.Forms.Label lbTu;
+        private System.Windows.Forms.Label lbToi;
         private System.Windows.Forms.DateTimePicker dtpTu;
         private System.Windows.Forms.DateTimePicker dtpDen;
         private System.Windows.Forms.Button btLoc;

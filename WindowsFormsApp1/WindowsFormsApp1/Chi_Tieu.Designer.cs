@@ -34,19 +34,19 @@
             this.tbHSX = new System.Windows.Forms.TextBox();
             this.nupG = new System.Windows.Forms.NumericUpDown();
             this.btThem = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbTenHang = new System.Windows.Forms.Label();
+            this.lbHSX = new System.Windows.Forms.Label();
+            this.lbGia = new System.Windows.Forms.Label();
             this.btXoa = new System.Windows.Forms.Button();
             this.tbNM = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbNoiMua = new System.Windows.Forms.Label();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbNgayMua = new System.Windows.Forms.Label();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.cbXtc = new System.Windows.Forms.CheckBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lbTu = new System.Windows.Forms.Label();
+            this.lbToi = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -125,35 +125,35 @@
             this.btThem.UseVisualStyleBackColor = true;
             this.btThem.Click += new System.EventHandler(this.btThem_Click);
             // 
-            // label1
+            // lbTenHang
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(67, 49);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 16);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Tên Hàng";
+            this.lbTenHang.AutoSize = true;
+            this.lbTenHang.Location = new System.Drawing.Point(67, 49);
+            this.lbTenHang.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbTenHang.Name = "lbTenHang";
+            this.lbTenHang.Size = new System.Drawing.Size(68, 16);
+            this.lbTenHang.TabIndex = 10;
+            this.lbTenHang.Text = "Tên Hàng";
             // 
-            // label2
+            // lbHSX
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(333, 49);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 16);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Hãng Sản Xuất:";
+            this.lbHSX.AutoSize = true;
+            this.lbHSX.Location = new System.Drawing.Point(333, 49);
+            this.lbHSX.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbHSX.Name = "lbHSX";
+            this.lbHSX.Size = new System.Drawing.Size(100, 16);
+            this.lbHSX.TabIndex = 11;
+            this.lbHSX.Text = "Hãng Sản Xuất:";
             // 
-            // label3
+            // lbGia
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(867, 49);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 16);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Giá:";
+            this.lbGia.AutoSize = true;
+            this.lbGia.Location = new System.Drawing.Point(867, 49);
+            this.lbGia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbGia.Name = "lbGia";
+            this.lbGia.Size = new System.Drawing.Size(32, 16);
+            this.lbGia.TabIndex = 13;
+            this.lbGia.Text = "Giá:";
             // 
             // btXoa
             // 
@@ -174,15 +174,15 @@
             this.tbNM.Size = new System.Drawing.Size(199, 22);
             this.tbNM.TabIndex = 2;
             // 
-            // label4
+            // lbNoiMua
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(600, 49);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 16);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Nơi Mua:";
+            this.lbNoiMua.AutoSize = true;
+            this.lbNoiMua.Location = new System.Drawing.Point(600, 49);
+            this.lbNoiMua.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbNoiMua.Name = "lbNoiMua";
+            this.lbNoiMua.Size = new System.Drawing.Size(61, 16);
+            this.lbNoiMua.TabIndex = 12;
+            this.lbNoiMua.Text = "Nơi Mua:";
             // 
             // notifyIcon1
             // 
@@ -199,15 +199,15 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(100, 22);
             this.dateTimePicker1.TabIndex = 4;
             // 
-            // label5
+            // lbNgayMua
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(993, 49);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 16);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Ngày Mua:";
+            this.lbNgayMua.AutoSize = true;
+            this.lbNgayMua.Location = new System.Drawing.Point(993, 49);
+            this.lbNgayMua.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbNgayMua.Name = "lbNgayMua";
+            this.lbNgayMua.Size = new System.Drawing.Size(73, 16);
+            this.lbNgayMua.TabIndex = 14;
+            this.lbNgayMua.Text = "Ngày Mua:";
             // 
             // cbXtc
             // 
@@ -223,25 +223,25 @@
             this.cbXtc.UseVisualStyleBackColor = true;
             this.cbXtc.CheckedChanged += new System.EventHandler(this.cbXtc_CheckedChanged);
             // 
-            // label6
+            // lbTu
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(333, 154);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(27, 16);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "Từ:";
+            this.lbTu.AutoSize = true;
+            this.lbTu.Location = new System.Drawing.Point(333, 154);
+            this.lbTu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbTu.Name = "lbTu";
+            this.lbTu.Size = new System.Drawing.Size(27, 16);
+            this.lbTu.TabIndex = 18;
+            this.lbTu.Text = "Từ:";
             // 
-            // label7
+            // lbToi
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(460, 154);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(31, 16);
-            this.label7.TabIndex = 19;
-            this.label7.Text = "Tới:";
+            this.lbToi.AutoSize = true;
+            this.lbToi.Location = new System.Drawing.Point(460, 154);
+            this.lbToi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbToi.Name = "lbToi";
+            this.lbToi.Size = new System.Drawing.Size(31, 16);
+            this.lbToi.TabIndex = 19;
+            this.lbToi.Text = "Tới:";
             // 
             // dataGridView1
             // 
@@ -365,17 +365,17 @@
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.btSdb);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lbToi);
+            this.Controls.Add(this.lbTu);
             this.Controls.Add(this.cbXtc);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lbNgayMua);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lbNoiMua);
             this.Controls.Add(this.tbNM);
             this.Controls.Add(this.btXoa);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbGia);
+            this.Controls.Add(this.lbHSX);
+            this.Controls.Add(this.lbTenHang);
             this.Controls.Add(this.btThem);
             this.Controls.Add(this.nupG);
             this.Controls.Add(this.tbHSX);
@@ -400,19 +400,19 @@
         private System.Windows.Forms.TextBox tbHSX;
         private System.Windows.Forms.NumericUpDown nupG;
         private System.Windows.Forms.Button btThem;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbTenHang;
+        private System.Windows.Forms.Label lbHSX;
+        private System.Windows.Forms.Label lbGia;
         private System.Windows.Forms.Button btXoa;
         private System.Windows.Forms.TextBox tbNM;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbNoiMua;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbNgayMua;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.CheckBox cbXtc;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbTu;
+        private System.Windows.Forms.Label lbToi;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btSdb;
         private TestdbDataSet4 testdbDataSet4;

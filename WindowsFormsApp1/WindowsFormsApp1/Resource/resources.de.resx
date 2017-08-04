@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="btLoc" xml:space="preserve">
+    <value>Filtern</value>
+  </data>
   <data name="btqlct" xml:space="preserve">
     <value>Ausgabe</value>
   </data>
@@ -135,6 +138,39 @@
   <data name="btqltn" xml:space="preserve">
     <value>Einkommen</value>
   </data>
+  <data name="btThem" xml:space="preserve">
+    <value>Einfügen</value>
+  </data>
+  <data name="btXoa" xml:space="preserve">
+    <value>Löschen</value>
+  </data>
+  <data name="cbXtc" xml:space="preserve">
+    <value>Alles anzeigen</value>
+  </data>
+  <data name="lbGia" xml:space="preserve">
+    <value>Preis</value>
+  </data>
+  <data name="lbHSX" xml:space="preserve">
+    <value>Firma</value>
+  </data>
+  <data name="lbNgayMua" xml:space="preserve">
+    <value>Datum des Einkauf</value>
+  </data>
+  <data name="lbNoiMua" xml:space="preserve">
+    <value>Ort des Einkauf</value>
+  </data>
+  <data name="lbTenHang" xml:space="preserve">
+    <value>Product</value>
+  </data>
+  <data name="lbToi" xml:space="preserve">
+    <value>Bis</value>
+  </data>
+  <data name="lbTu" xml:space="preserve">
+    <value>Von</value>
+  </data>
+  <data name="mainText" xml:space="preserve">
+    <value>Private Verwaltung Software</value>
+  </data>
   <data name="mnctr" xml:space="preserve">
     <value>Programm</value>
   </data>
@@ -143,5 +179,23 @@
   </data>
   <data name="mntrg" xml:space="preserve">
     <value>Hilfe</value>
+  </data>
+  <data name="lbGhiChu" xml:space="preserve">
+    <value>Notiz</value>
+  </data>
+  <data name="lbLichSuGdv" xml:space="preserve">
+    <value>Verlauf der Transaktion</value>
+  </data>
+  <data name="lbLoaiGiaoDich" xml:space="preserve">
+    <value>Art der Transaktion</value>
+  </data>
+  <data name="lbMenhGia" xml:space="preserve">
+    <value>Währung</value>
+  </data>
+  <data name="lbNgayGiaoDich" xml:space="preserve">
+    <value>Datum der Transaktion</value>
+  </data>
+  <data name="lbSoTien" xml:space="preserve">
+    <value>Betrag</value>
   </data>
 </root>

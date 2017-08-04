@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="btLoc" xml:space="preserve">
+    <value>Lọc</value>
+  </data>
   <data name="btqlct" xml:space="preserve">
     <value>Quản Lý Chi Tiêu</value>
   </data>
@@ -135,6 +138,39 @@
   <data name="btqltn" xml:space="preserve">
     <value>Quản Lý Thu Nhập</value>
   </data>
+  <data name="btThem" xml:space="preserve">
+    <value>Thêm </value>
+  </data>
+  <data name="btXoa" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="cbXtc" xml:space="preserve">
+    <value>Xem Tất Cả</value>
+  </data>
+  <data name="lbGia" xml:space="preserve">
+    <value>Giá</value>
+  </data>
+  <data name="lbHSX" xml:space="preserve">
+    <value>Hãng Sản Xuất</value>
+  </data>
+  <data name="lbNgayMua" xml:space="preserve">
+    <value>Ngày Mua</value>
+  </data>
+  <data name="lbNoiMua" xml:space="preserve">
+    <value>Nơi Mua</value>
+  </data>
+  <data name="lbTenHang" xml:space="preserve">
+    <value>Tên Hàng</value>
+  </data>
+  <data name="lbToi" xml:space="preserve">
+    <value>Tới</value>
+  </data>
+  <data name="lbTu" xml:space="preserve">
+    <value>Từ</value>
+  </data>
+  <data name="mainText" xml:space="preserve">
+    <value>Phần Mềm Quản Lý Cá Nhân</value>
+  </data>
   <data name="mnctr" xml:space="preserve">
     <value>Chương Trình</value>
   </data>
@@ -143,5 +179,23 @@
   </data>
   <data name="mntrg" xml:space="preserve">
     <value>Trợ Giúp</value>
+  </data>
+  <data name="lbGhiChu" xml:space="preserve">
+    <value>Ghi Chú</value>
+  </data>
+  <data name="lbLichSuGdv" xml:space="preserve">
+    <value>Lịch Sử Giao Dịch</value>
+  </data>
+  <data name="lbLoaiGiaoDich" xml:space="preserve">
+    <value>Loại Giao Dịch</value>
+  </data>
+  <data name="lbMenhGia" xml:space="preserve">
+    <value>Mệnh Giá</value>
+  </data>
+  <data name="lbNgayGiaoDich" xml:space="preserve">
+    <value>Ngày Giao Dịch</value>
+  </data>
+  <data name="lbSoTien" xml:space="preserve">
+    <value>Số Tiền</value>
   </data>
 </root>

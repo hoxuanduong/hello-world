@@ -18,9 +18,6 @@ namespace WindowsFormsApp1
     public partial class Main : Form
     {
 
-        ResourceManager res_man;    // declare Resource manager to access to specific cultureinfo
-        CultureInfo cul;            // declare culture info
-
         public Main()
         {
             InitializeComponent();
@@ -63,16 +60,9 @@ namespace WindowsFormsApp1
             //{
             //    this.btQlct.Text = rm.GetString("0001");
             //}
-           
-            res_man = new ResourceManager("WindowsFormsApp1.Resource.resources", Assembly.GetExecutingAssembly());
-            this.btQlct.Text = res_man.GetString("btqlct",cul);
-            this.btQldt.Text = res_man.GetString("btqldt", cul);
-            this.btQltn.Text = res_man.GetString("btqltn", cul);
-            this.btQlgt.Text = res_man.GetString("btqlgt", cul);
-            this.btQlcvlh.Text = res_man.GetString("btqlcvlh", cul);
-            this.btQlhd.Text = res_man.GetString("btqlhd", cul);
-
-
+            Global_Class.Language.cul = CultureInfo.CreateSpecificCulture("en");
+            Global_Class.Language.res_man = new ResourceManager("WindowsFormsApp1.Resource.resources", Assembly.GetExecutingAssembly());
+            update_UI_Main();
         }
 
         public void UncheckOtherToolStripMenuItems(ToolStripMenuItem selectedMenuItem)
@@ -97,19 +87,36 @@ namespace WindowsFormsApp1
         private void englishToolStripMenuItem_Click(object sender, EventArgs e)
         {
             UncheckOtherToolStripMenuItems((ToolStripMenuItem)sender);
-            cul = CultureInfo.CreateSpecificCulture("en");
+            Global_Class.Language.cul = CultureInfo.CreateSpecificCulture("en");
+            update_UI_Main();
         }
 
         private void vietnamToolStripMenuItem_Click(object sender, EventArgs e)
         {
             UncheckOtherToolStripMenuItems((ToolStripMenuItem)sender);
-            cul = CultureInfo.CreateSpecificCulture("vi");
+            Global_Class.Language.cul = CultureInfo.CreateSpecificCulture("vi");
+            update_UI_Main();
         }
 
         private void deutschToolStripMenuItem_Click(object sender, EventArgs e)
         {
             UncheckOtherToolStripMenuItems((ToolStripMenuItem)sender);
-            cul = CultureInfo.CreateSpecificCulture("de");
+            Global_Class.Language.cul = CultureInfo.CreateSpecificCulture("de");
+            update_UI_Main();
+        }
+
+        private void update_UI_Main()
+        {
+            this.btQlct.Text = Global_Class.Language.res_man.GetString("btqlct", Global_Class.Language.cul);
+            this.btQldt.Text = Global_Class.Language.res_man.GetString("btqldt", Global_Class.Language.cul);
+            this.btQltn.Text = Global_Class.Language.res_man.GetString("btqltn", Global_Class.Language.cul);
+            this.btQlgt.Text = Global_Class.Language.res_man.GetString("btqlgt", Global_Class.Language.cul);
+            this.btQlcvlh.Text = Global_Class.Language.res_man.GetString("btqlcvlh", Global_Class.Language.cul);
+            this.btQlhd.Text = Global_Class.Language.res_man.GetString("btqlhd", Global_Class.Language.cul);
+            this.menuStrip1.Items[0].Text = Global_Class.Language.res_man.GetString("mnctr", Global_Class.Language.cul);
+            this.menuStrip1.Items[1].Text = Global_Class.Language.res_man.GetString("mntrg", Global_Class.Language.cul);
+            this.menuStrip1.Items[2].Text = Global_Class.Language.res_man.GetString("mnnn", Global_Class.Language.cul);
+            this.Text = Global_Class.Language.res_man.GetString("mainText", Global_Class.Language.cul);
         }
     }
 }

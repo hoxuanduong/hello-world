@@ -92,6 +92,7 @@
     <Compile Include="GiaoDichVon.Designer.cs">
       <DependentUpon>GiaoDichVon.cs</DependentUpon>
     </Compile>
+    <Compile Include="Global_Class.cs" />
     <Compile Include="NhapNgonNgu.cs">
       <SubType>Form</SubType>
     </Compile>
