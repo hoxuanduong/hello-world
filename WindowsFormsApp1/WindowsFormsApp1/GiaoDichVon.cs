@@ -36,6 +36,8 @@ namespace WindowsFormsApp1
         {
             // TODO: Diese Codezeile lädt Daten in die Tabelle "gDV.GiaoDichVon". Sie können sie bei Bedarf verschieben oder entfernen.
             this.giaoDichVonTableAdapter.Fill(this.GDV.GiaoDichVon);
+            cbLoaiGiaoDichVon.SelectedIndex = 0;
+            cbMenhGia.SelectedIndex = 0;
             update_UI_GiaoDichVon();
 
         }
@@ -319,21 +321,64 @@ namespace WindowsFormsApp1
             this.giaoDichVonTableAdapter.Fill(this.GDV.GiaoDichVon);
         }
 
+        //contain of the datagridview has been changed
         private void giaoDichVonBindingSource_ListChanged(object sender, ListChangedEventArgs e)
         {
+
+            update_dgv_display();
+
+        }
+
+        private void update_dgv_display()
+        {
+            double euro = 0, usd = 0, vnd = 0;
+
             foreach (DataGridViewRow row in dgvGiaoDichVon.Rows)
             {
 
+
+
+                //update rows color
                 if (row.Index != dgvGiaoDichVon.NewRowIndex) //this condition is very important, otherwise always have error null object of the newline
                 {
                     //the string read from cell contain a space at the end -> before compare remove this space
                     if (row.Cells[0].Value.ToString().TrimEnd().Equals(cbLoaiGiaoDichVon.Items[0]))
                     {
                         row.DefaultCellStyle.ForeColor = Color.Green;
+                        switch (row.Cells[3].Value.ToString().TrimEnd())
+                        {
+                            case "euro":
+                                euro += double.Parse(row.Cells[2].Value.ToString());
+                                break;
+                            case "usd":
+                                usd += double.Parse(row.Cells[2].Value.ToString());
+                                break;
+                            case "vnd":
+                                vnd += double.Parse(row.Cells[2].Value.ToString());
+                                break;
+                            default:
+                                break;
+
+                        }
                     }
                     else if (row.Cells[0].Value.ToString().TrimEnd().Equals(cbLoaiGiaoDichVon.Items[1]))
                     {
                         row.DefaultCellStyle.ForeColor = Color.Red;
+                        switch (row.Cells[3].Value.ToString().TrimEnd())
+                        {
+                            case "euro":
+                                euro -= double.Parse(row.Cells[2].Value.ToString());
+                                break;
+                            case "usd":
+                                usd -= double.Parse(row.Cells[2].Value.ToString());
+                                break;
+                            case "vnd":
+                                vnd -= double.Parse(row.Cells[2].Value.ToString());
+                                break;
+                            default:
+                                break;
+
+                        }
                     }
                     else
                     {
@@ -341,7 +386,12 @@ namespace WindowsFormsApp1
                     }
 
                 }
-                
+
+                lbeuro.Text = euro.ToString();
+                lbusd.Text = usd.ToString();
+                lbvnd.Text = vnd.ToString();
+
+
             }
         }
 
@@ -363,7 +413,7 @@ namespace WindowsFormsApp1
 
         private void btLoc_Click(object sender, EventArgs e)
         {
-
+            giaoDichVonBindingSource.Filter = "Date >= '" + dtpTu.Value + "' And Date <='" + dtpDen.Value + "'";
         }
     }
 }

@@ -136,6 +136,7 @@ namespace WindowsFormsApp1
         {
             // TODO: Diese Codezeile lädt Daten in die Tabelle "testdbDataSet4.TestTable". Sie können sie bei Bedarf verschieben oder entfernen.
             this.testTableTableAdapter.Fill(this.testdbDataSet4.TestTable);
+
             update_UI_ChiTieu();
 
         }

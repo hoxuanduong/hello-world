@@ -214,7 +214,7 @@
             this.cbMenhGia.Items.AddRange(new object[] {
             "euro",
             "usd",
-            "vnđ"});
+            "vnd"});
             this.cbMenhGia.Location = new System.Drawing.Point(372, 95);
             this.cbMenhGia.Name = "cbMenhGia";
             this.cbMenhGia.Size = new System.Drawing.Size(100, 24);
