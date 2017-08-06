@@ -29,35 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btSave = new System.Windows.Forms.Button();
-            this.duLieuNN = new WindowsFormsApp1.DuLieuNN();
+            this.dgvNgonNgu = new System.Windows.Forms.DataGridView();
+            this.testdbNNDataSet = new WindowsFormsApp1.testdbNNDataSet();
             this.ngonNguBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ngonNguTableAdapter = new WindowsFormsApp1.testdbNNDataSetTableAdapters.NgonNguTableAdapter();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.englishDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vietnameseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.englishDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.germanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.duLieuNN)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNgonNgu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testdbNNDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ngonNguBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDDataGridViewTextBoxColumn,
-            this.englishDataGridViewTextBoxColumn,
-            this.vietnameseDataGridViewTextBoxColumn,
-            this.germanDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.ngonNguBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(683, 311);
-            this.dataGridView1.TabIndex = 0;
             // 
             // btSave
             // 
@@ -69,15 +53,36 @@
             this.btSave.UseVisualStyleBackColor = true;
             this.btSave.Click += new System.EventHandler(this.btSave_Click);
             // 
-            // duLieuNN
+            // dgvNgonNgu
             // 
-            this.duLieuNN.DataSetName = "DuLieuNN";
-            this.duLieuNN.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dgvNgonNgu.AutoGenerateColumns = false;
+            this.dgvNgonNgu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvNgonNgu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvNgonNgu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDDataGridViewTextBoxColumn,
+            this.vietnameseDataGridViewTextBoxColumn,
+            this.englishDataGridViewTextBoxColumn,
+            this.germanDataGridViewTextBoxColumn});
+            this.dgvNgonNgu.DataSource = this.ngonNguBindingSource;
+            this.dgvNgonNgu.Location = new System.Drawing.Point(12, 12);
+            this.dgvNgonNgu.Name = "dgvNgonNgu";
+            this.dgvNgonNgu.RowTemplate.Height = 24;
+            this.dgvNgonNgu.Size = new System.Drawing.Size(683, 312);
+            this.dgvNgonNgu.TabIndex = 2;
+            // 
+            // testdbNNDataSet
+            // 
+            this.testdbNNDataSet.DataSetName = "testdbNNDataSet";
+            this.testdbNNDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // ngonNguBindingSource
             // 
             this.ngonNguBindingSource.DataMember = "NgonNgu";
-            this.ngonNguBindingSource.DataSource = this.duLieuNN;
+            this.ngonNguBindingSource.DataSource = this.testdbNNDataSet;
+            // 
+            // ngonNguTableAdapter
+            // 
+            this.ngonNguTableAdapter.ClearBeforeFill = true;
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -85,17 +90,17 @@
             this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
             this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
             // 
-            // englishDataGridViewTextBoxColumn
-            // 
-            this.englishDataGridViewTextBoxColumn.DataPropertyName = "English";
-            this.englishDataGridViewTextBoxColumn.HeaderText = "English";
-            this.englishDataGridViewTextBoxColumn.Name = "englishDataGridViewTextBoxColumn";
-            // 
             // vietnameseDataGridViewTextBoxColumn
             // 
             this.vietnameseDataGridViewTextBoxColumn.DataPropertyName = "Vietnamese";
             this.vietnameseDataGridViewTextBoxColumn.HeaderText = "Vietnamese";
             this.vietnameseDataGridViewTextBoxColumn.Name = "vietnameseDataGridViewTextBoxColumn";
+            // 
+            // englishDataGridViewTextBoxColumn
+            // 
+            this.englishDataGridViewTextBoxColumn.DataPropertyName = "English";
+            this.englishDataGridViewTextBoxColumn.HeaderText = "English";
+            this.englishDataGridViewTextBoxColumn.Name = "englishDataGridViewTextBoxColumn";
             // 
             // germanDataGridViewTextBoxColumn
             // 
@@ -108,26 +113,27 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(707, 395);
+            this.Controls.Add(this.dgvNgonNgu);
             this.Controls.Add(this.btSave);
-            this.Controls.Add(this.dataGridView1);
             this.Name = "NhapNgonNgu";
             this.Text = "NhapNgonNgu";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.duLieuNN)).EndInit();
+            this.Load += new System.EventHandler(this.NhapNgonNgu_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNgonNgu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testdbNNDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ngonNguBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn englishDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn vietnameseDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn germanDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource ngonNguBindingSource;
-        private DuLieuNN duLieuNN;
         private System.Windows.Forms.Button btSave;
+        private System.Windows.Forms.DataGridView dgvNgonNgu;
+        private testdbNNDataSet testdbNNDataSet;
+        private System.Windows.Forms.BindingSource ngonNguBindingSource;
+        private testdbNNDataSetTableAdapters.NgonNguTableAdapter ngonNguTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vietnameseDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn englishDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn germanDataGridViewTextBoxColumn;
     }
 }

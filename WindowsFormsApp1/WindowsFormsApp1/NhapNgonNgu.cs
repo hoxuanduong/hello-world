@@ -20,7 +20,7 @@ namespace WindowsFormsApp1
 
         private void btSave_Click(object sender, EventArgs e)
         {
-            duLieuNN.WriteXml(String.Format("{0}/data.xml", Application.StartupPath));
+            testdbNNDataSet.WriteXml(String.Format("{0}/data.xml", Application.StartupPath));
 
             ResourceWriter ren = new ResourceWriter(Application.StartupPath + "/resource.en-US.resources");
 
@@ -28,7 +28,7 @@ namespace WindowsFormsApp1
 
             ResourceWriter rvn = new ResourceWriter(Application.StartupPath + "/resource.vn-VN.resources");
 
-            foreach (DuLieuNN.NgonNguRow row in duLieuNN.NgonNgu.Rows)
+            foreach (testdbNNDataSet.NgonNguRow row in testdbNNDataSet.NgonNgu.Rows)
             {
                 ren.AddResource(row.ID, row.English);
                 rde.AddResource(row.ID, row.German);
@@ -41,6 +41,13 @@ namespace WindowsFormsApp1
             rvn.Generate();
             rvn.Close();
             MessageBox.Show("đã nhập ngôn ngữ thành công", "thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void NhapNgonNgu_Load(object sender, EventArgs e)
+        {
+            // TODO: Diese Codezeile lädt Daten in die Tabelle "testdbNNDataSet.NgonNgu". Sie können sie bei Bedarf verschieben oder entfernen.
+            this.ngonNguTableAdapter.Fill(this.testdbNNDataSet.NgonNgu);
+
         }
     }
 }

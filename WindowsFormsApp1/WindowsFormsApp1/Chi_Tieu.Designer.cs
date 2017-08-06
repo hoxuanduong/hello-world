@@ -131,7 +131,7 @@
             this.lbTenHang.Location = new System.Drawing.Point(67, 49);
             this.lbTenHang.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbTenHang.Name = "lbTenHang";
-            this.lbTenHang.Size = new System.Drawing.Size(68, 16);
+            this.lbTenHang.Size = new System.Drawing.Size(71, 17);
             this.lbTenHang.TabIndex = 10;
             this.lbTenHang.Text = "Tên Hàng";
             // 
@@ -141,7 +141,7 @@
             this.lbHSX.Location = new System.Drawing.Point(333, 49);
             this.lbHSX.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbHSX.Name = "lbHSX";
-            this.lbHSX.Size = new System.Drawing.Size(100, 16);
+            this.lbHSX.Size = new System.Drawing.Size(108, 17);
             this.lbHSX.TabIndex = 11;
             this.lbHSX.Text = "Hãng Sản Xuất:";
             // 
@@ -151,7 +151,7 @@
             this.lbGia.Location = new System.Drawing.Point(867, 49);
             this.lbGia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbGia.Name = "lbGia";
-            this.lbGia.Size = new System.Drawing.Size(32, 16);
+            this.lbGia.Size = new System.Drawing.Size(34, 17);
             this.lbGia.TabIndex = 13;
             this.lbGia.Text = "Giá:";
             // 
@@ -180,7 +180,7 @@
             this.lbNoiMua.Location = new System.Drawing.Point(600, 49);
             this.lbNoiMua.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbNoiMua.Name = "lbNoiMua";
-            this.lbNoiMua.Size = new System.Drawing.Size(61, 16);
+            this.lbNoiMua.Size = new System.Drawing.Size(64, 17);
             this.lbNoiMua.TabIndex = 12;
             this.lbNoiMua.Text = "Nơi Mua:";
             // 
@@ -205,7 +205,7 @@
             this.lbNgayMua.Location = new System.Drawing.Point(993, 49);
             this.lbNgayMua.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbNgayMua.Name = "lbNgayMua";
-            this.lbNgayMua.Size = new System.Drawing.Size(73, 16);
+            this.lbNgayMua.Size = new System.Drawing.Size(76, 17);
             this.lbNgayMua.TabIndex = 14;
             this.lbNgayMua.Text = "Ngày Mua:";
             // 
@@ -217,7 +217,7 @@
             this.cbXtc.Location = new System.Drawing.Point(67, 154);
             this.cbXtc.Margin = new System.Windows.Forms.Padding(4);
             this.cbXtc.Name = "cbXtc";
-            this.cbXtc.Size = new System.Drawing.Size(100, 20);
+            this.cbXtc.Size = new System.Drawing.Size(108, 21);
             this.cbXtc.TabIndex = 15;
             this.cbXtc.Text = "Xem Tất Cả:";
             this.cbXtc.UseVisualStyleBackColor = true;
@@ -229,7 +229,7 @@
             this.lbTu.Location = new System.Drawing.Point(333, 154);
             this.lbTu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbTu.Name = "lbTu";
-            this.lbTu.Size = new System.Drawing.Size(27, 16);
+            this.lbTu.Size = new System.Drawing.Size(29, 17);
             this.lbTu.TabIndex = 18;
             this.lbTu.Text = "Từ:";
             // 
@@ -239,7 +239,7 @@
             this.lbToi.Location = new System.Drawing.Point(460, 154);
             this.lbToi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbToi.Name = "lbToi";
-            this.lbToi.Size = new System.Drawing.Size(31, 16);
+            this.lbToi.Size = new System.Drawing.Size(32, 17);
             this.lbToi.TabIndex = 19;
             this.lbToi.Text = "Tới:";
             // 

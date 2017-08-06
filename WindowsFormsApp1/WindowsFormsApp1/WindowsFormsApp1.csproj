@@ -73,11 +73,6 @@
     <Compile Include="DauTu.Designer.cs">
       <DependentUpon>DauTu.cs</DependentUpon>
     </Compile>
-    <Compile Include="DuLieuNN.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DuLieuNN.xsd</DependentUpon>
-    </Compile>
     <Compile Include="GDV.cs">
       <DependentUpon>GDV.xsd</DependentUpon>
     </Compile>
@@ -118,6 +113,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TestdbDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="testdbNNDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>testdbNNDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Trang_Chinh.cs">
       <SubType>Form</SubType>
@@ -163,17 +163,6 @@
     <EmbeddedResource Include="Trang_Chinh.resx">
       <DependentUpon>Trang_Chinh.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DuLieuNN.xsc">
-      <DependentUpon>DuLieuNN.xsd</DependentUpon>
-    </None>
-    <None Include="DuLieuNN.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DuLieuNN.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="DuLieuNN.xss">
-      <DependentUpon>DuLieuNN.xsd</DependentUpon>
-    </None>
     <None Include="GDV.xsc">
       <DependentUpon>GDV.xsd</DependentUpon>
     </None>
@@ -204,6 +193,17 @@
     </None>
     <None Include="TestdbDataSet4.xss">
       <DependentUpon>TestdbDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="testdbNNDataSet.xsc">
+      <DependentUpon>testdbNNDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="testdbNNDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>testdbNNDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="testdbNNDataSet.xss">
+      <DependentUpon>testdbNNDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

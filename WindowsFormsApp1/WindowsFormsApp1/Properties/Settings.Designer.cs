@@ -32,5 +32,16 @@ namespace WindowsFormsApp1.Properties {
                 return ((string)(this["TestdbConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=mysqltest.ctrglqabpwga.us-west-2.rds.amazonaws.com,1433;Initial Catal" +
+            "og=testdb;Persist Security Info=True;User ID=xdho;Password=lentus3012")]
+        public string testdbConnectionString1 {
+            get {
+                return ((string)(this["testdbConnectionString1"]));
+            }
+        }
     }
 }
