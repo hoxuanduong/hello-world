@@ -45,9 +45,10 @@
             // 
             // btSave
             // 
-            this.btSave.Location = new System.Drawing.Point(619, 348);
+            this.btSave.Location = new System.Drawing.Point(464, 283);
+            this.btSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btSave.Name = "btSave";
-            this.btSave.Size = new System.Drawing.Size(75, 23);
+            this.btSave.Size = new System.Drawing.Size(56, 19);
             this.btSave.TabIndex = 1;
             this.btSave.Text = "button1";
             this.btSave.UseVisualStyleBackColor = true;
@@ -64,10 +65,11 @@
             this.englishDataGridViewTextBoxColumn,
             this.germanDataGridViewTextBoxColumn});
             this.dgvNgonNgu.DataSource = this.ngonNguBindingSource;
-            this.dgvNgonNgu.Location = new System.Drawing.Point(12, 12);
+            this.dgvNgonNgu.Location = new System.Drawing.Point(9, 10);
+            this.dgvNgonNgu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvNgonNgu.Name = "dgvNgonNgu";
             this.dgvNgonNgu.RowTemplate.Height = 24;
-            this.dgvNgonNgu.Size = new System.Drawing.Size(683, 312);
+            this.dgvNgonNgu.Size = new System.Drawing.Size(512, 254);
             this.dgvNgonNgu.TabIndex = 2;
             // 
             // testdbNNDataSet
@@ -110,11 +112,12 @@
             // 
             // NhapNgonNgu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(707, 395);
+            this.ClientSize = new System.Drawing.Size(530, 321);
             this.Controls.Add(this.dgvNgonNgu);
             this.Controls.Add(this.btSave);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "NhapNgonNgu";
             this.Text = "NhapNgonNgu";
             this.Load += new System.EventHandler(this.NhapNgonNgu_Load);

@@ -18,5 +18,21 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=mysqltest.ctrglqabpwga.us-west-2.rds.amazonaws.com,1433;Initial Catalog=testdb;Persist Security Info=True;User ID=xdho;Password=lentus3012</Value>
     </Setting>
+    <Setting Name="testdbConnectionString2" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=mysql.c3r9um7vz9v5.us-east-1.rds.amazonaws.com,1433;Initial Catalog=testdb;Persist Security Info=True;User ID=xdho;Password=lentus3012&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=mysql.c3r9um7vz9v5.us-east-1.rds.amazonaws.com,1433;Initial Catalog=testdb;Persist Security Info=True;User ID=xdho;Password=lentus3012</Value>
+    </Setting>
+    <Setting Name="testdb2ConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=mysql.c3r9um7vz9v5.us-east-1.rds.amazonaws.com,1433;Initial Catalog=testdb2;Persist Security Info=True;User ID=xdho;Password=lentus3012&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=mysql.c3r9um7vz9v5.us-east-1.rds.amazonaws.com,1433;Initial Catalog=testdb2;Persist Security Info=True;User ID=xdho;Password=lentus3012</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

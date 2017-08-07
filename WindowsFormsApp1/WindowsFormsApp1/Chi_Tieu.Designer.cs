@@ -48,22 +48,22 @@
             this.lbTu = new System.Windows.Forms.Label();
             this.lbToi = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btSdb = new System.Windows.Forms.Button();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.btLoc = new System.Windows.Forms.Button();
+            this.testdbCTDataSet = new WindowsFormsApp1.testdbCTDataSet();
+            this.chiTieuBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.chiTieuTableAdapter = new WindowsFormsApp1.testdbCTDataSetTableAdapters.ChiTieuTableAdapter();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.manufacturerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.placeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.testTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.testdbDataSet4 = new WindowsFormsApp1.TestdbDataSet4();
-            this.btSdb = new System.Windows.Forms.Button();
-            this.testTableTableAdapter = new WindowsFormsApp1.TestdbDataSet4TableAdapters.TestTableTableAdapter();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.btLoc = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nupG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.testTableBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.testdbDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testdbCTDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chiTieuBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // openFileDialog1
@@ -76,18 +76,16 @@
             // 
             // tbTH
             // 
-            this.tbTH.Location = new System.Drawing.Point(67, 92);
-            this.tbTH.Margin = new System.Windows.Forms.Padding(4);
+            this.tbTH.Location = new System.Drawing.Point(50, 75);
             this.tbTH.Name = "tbTH";
-            this.tbTH.Size = new System.Drawing.Size(199, 22);
+            this.tbTH.Size = new System.Drawing.Size(150, 20);
             this.tbTH.TabIndex = 0;
             // 
             // tbHSX
             // 
-            this.tbHSX.Location = new System.Drawing.Point(333, 92);
-            this.tbHSX.Margin = new System.Windows.Forms.Padding(4);
+            this.tbHSX.Location = new System.Drawing.Point(250, 75);
             this.tbHSX.Name = "tbHSX";
-            this.tbHSX.Size = new System.Drawing.Size(199, 22);
+            this.tbHSX.Size = new System.Drawing.Size(150, 20);
             this.tbHSX.TabIndex = 1;
             // 
             // nupG
@@ -98,8 +96,7 @@
             0,
             0,
             131072});
-            this.nupG.Location = new System.Drawing.Point(867, 92);
-            this.nupG.Margin = new System.Windows.Forms.Padding(4);
+            this.nupG.Location = new System.Drawing.Point(650, 75);
             this.nupG.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -111,15 +108,14 @@
             0,
             -2147483648});
             this.nupG.Name = "nupG";
-            this.nupG.Size = new System.Drawing.Size(100, 22);
+            this.nupG.Size = new System.Drawing.Size(75, 20);
             this.nupG.TabIndex = 3;
             // 
             // btThem
             // 
-            this.btThem.Location = new System.Drawing.Point(867, 142);
-            this.btThem.Margin = new System.Windows.Forms.Padding(4);
+            this.btThem.Location = new System.Drawing.Point(650, 115);
             this.btThem.Name = "btThem";
-            this.btThem.Size = new System.Drawing.Size(100, 28);
+            this.btThem.Size = new System.Drawing.Size(75, 23);
             this.btThem.TabIndex = 5;
             this.btThem.Text = "&Thêm";
             this.btThem.UseVisualStyleBackColor = true;
@@ -128,39 +124,35 @@
             // lbTenHang
             // 
             this.lbTenHang.AutoSize = true;
-            this.lbTenHang.Location = new System.Drawing.Point(67, 49);
-            this.lbTenHang.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbTenHang.Location = new System.Drawing.Point(50, 40);
             this.lbTenHang.Name = "lbTenHang";
-            this.lbTenHang.Size = new System.Drawing.Size(71, 17);
+            this.lbTenHang.Size = new System.Drawing.Size(55, 13);
             this.lbTenHang.TabIndex = 10;
             this.lbTenHang.Text = "Tên Hàng";
             // 
             // lbHSX
             // 
             this.lbHSX.AutoSize = true;
-            this.lbHSX.Location = new System.Drawing.Point(333, 49);
-            this.lbHSX.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbHSX.Location = new System.Drawing.Point(250, 40);
             this.lbHSX.Name = "lbHSX";
-            this.lbHSX.Size = new System.Drawing.Size(108, 17);
+            this.lbHSX.Size = new System.Drawing.Size(83, 13);
             this.lbHSX.TabIndex = 11;
             this.lbHSX.Text = "Hãng Sản Xuất:";
             // 
             // lbGia
             // 
             this.lbGia.AutoSize = true;
-            this.lbGia.Location = new System.Drawing.Point(867, 49);
-            this.lbGia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbGia.Location = new System.Drawing.Point(650, 40);
             this.lbGia.Name = "lbGia";
-            this.lbGia.Size = new System.Drawing.Size(34, 17);
+            this.lbGia.Size = new System.Drawing.Size(26, 13);
             this.lbGia.TabIndex = 13;
             this.lbGia.Text = "Giá:";
             // 
             // btXoa
             // 
-            this.btXoa.Location = new System.Drawing.Point(993, 142);
-            this.btXoa.Margin = new System.Windows.Forms.Padding(4);
+            this.btXoa.Location = new System.Drawing.Point(745, 115);
             this.btXoa.Name = "btXoa";
-            this.btXoa.Size = new System.Drawing.Size(100, 28);
+            this.btXoa.Size = new System.Drawing.Size(75, 23);
             this.btXoa.TabIndex = 6;
             this.btXoa.Text = "&Xóa";
             this.btXoa.UseVisualStyleBackColor = true;
@@ -168,19 +160,17 @@
             // 
             // tbNM
             // 
-            this.tbNM.Location = new System.Drawing.Point(600, 92);
-            this.tbNM.Margin = new System.Windows.Forms.Padding(4);
+            this.tbNM.Location = new System.Drawing.Point(450, 75);
             this.tbNM.Name = "tbNM";
-            this.tbNM.Size = new System.Drawing.Size(199, 22);
+            this.tbNM.Size = new System.Drawing.Size(150, 20);
             this.tbNM.TabIndex = 2;
             // 
             // lbNoiMua
             // 
             this.lbNoiMua.AutoSize = true;
-            this.lbNoiMua.Location = new System.Drawing.Point(600, 49);
-            this.lbNoiMua.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbNoiMua.Location = new System.Drawing.Point(450, 40);
             this.lbNoiMua.Name = "lbNoiMua";
-            this.lbNoiMua.Size = new System.Drawing.Size(64, 17);
+            this.lbNoiMua.Size = new System.Drawing.Size(50, 13);
             this.lbNoiMua.TabIndex = 12;
             this.lbNoiMua.Text = "Nơi Mua:";
             // 
@@ -193,19 +183,17 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(993, 92);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
+            this.dateTimePicker1.Location = new System.Drawing.Point(745, 75);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(100, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(76, 20);
             this.dateTimePicker1.TabIndex = 4;
             // 
             // lbNgayMua
             // 
             this.lbNgayMua.AutoSize = true;
-            this.lbNgayMua.Location = new System.Drawing.Point(993, 49);
-            this.lbNgayMua.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbNgayMua.Location = new System.Drawing.Point(745, 40);
             this.lbNgayMua.Name = "lbNgayMua";
-            this.lbNgayMua.Size = new System.Drawing.Size(76, 17);
+            this.lbNgayMua.Size = new System.Drawing.Size(59, 13);
             this.lbNgayMua.TabIndex = 14;
             this.lbNgayMua.Text = "Ngày Mua:";
             // 
@@ -214,10 +202,9 @@
             this.cbXtc.AutoSize = true;
             this.cbXtc.Checked = true;
             this.cbXtc.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbXtc.Location = new System.Drawing.Point(67, 154);
-            this.cbXtc.Margin = new System.Windows.Forms.Padding(4);
+            this.cbXtc.Location = new System.Drawing.Point(50, 125);
             this.cbXtc.Name = "cbXtc";
-            this.cbXtc.Size = new System.Drawing.Size(108, 21);
+            this.cbXtc.Size = new System.Drawing.Size(85, 17);
             this.cbXtc.TabIndex = 15;
             this.cbXtc.Text = "Xem Tất Cả:";
             this.cbXtc.UseVisualStyleBackColor = true;
@@ -226,20 +213,18 @@
             // lbTu
             // 
             this.lbTu.AutoSize = true;
-            this.lbTu.Location = new System.Drawing.Point(333, 154);
-            this.lbTu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbTu.Location = new System.Drawing.Point(250, 125);
             this.lbTu.Name = "lbTu";
-            this.lbTu.Size = new System.Drawing.Size(29, 17);
+            this.lbTu.Size = new System.Drawing.Size(23, 13);
             this.lbTu.TabIndex = 18;
             this.lbTu.Text = "Từ:";
             // 
             // lbToi
             // 
             this.lbToi.AutoSize = true;
-            this.lbToi.Location = new System.Drawing.Point(460, 154);
-            this.lbToi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbToi.Location = new System.Drawing.Point(345, 125);
             this.lbToi.Name = "lbToi";
-            this.lbToi.Size = new System.Drawing.Size(32, 17);
+            this.lbToi.Size = new System.Drawing.Size(25, 13);
             this.lbToi.TabIndex = 19;
             this.lbToi.Text = "Tới:";
             // 
@@ -255,16 +240,65 @@
             this.manufacturerDataGridViewTextBoxColumn,
             this.placeDataGridViewTextBoxColumn,
             this.priceDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.testTableBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(67, 223);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.DataSource = this.chiTieuBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(50, 181);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 50;
-            this.dataGridView1.Size = new System.Drawing.Size(1200, 646);
+            this.dataGridView1.Size = new System.Drawing.Size(900, 525);
             this.dataGridView1.TabIndex = 20;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
+            // 
+            // btSdb
+            // 
+            this.btSdb.Location = new System.Drawing.Point(0, 0);
+            this.btSdb.Name = "btSdb";
+            this.btSdb.Size = new System.Drawing.Size(75, 23);
+            this.btSdb.TabIndex = 0;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Enabled = false;
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker2.Location = new System.Drawing.Point(252, 141);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(80, 20);
+            this.dateTimePicker2.TabIndex = 21;
+            // 
+            // dateTimePicker3
+            // 
+            this.dateTimePicker3.Enabled = false;
+            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker3.Location = new System.Drawing.Point(347, 141);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(80, 20);
+            this.dateTimePicker3.TabIndex = 22;
+            // 
+            // btLoc
+            // 
+            this.btLoc.Enabled = false;
+            this.btLoc.Location = new System.Drawing.Point(450, 136);
+            this.btLoc.Name = "btLoc";
+            this.btLoc.Size = new System.Drawing.Size(75, 23);
+            this.btLoc.TabIndex = 23;
+            this.btLoc.Text = "&Lọc";
+            this.btLoc.UseVisualStyleBackColor = true;
+            this.btLoc.Click += new System.EventHandler(this.btLoc_Click);
+            // 
+            // testdbCTDataSet
+            // 
+            this.testdbCTDataSet.DataSetName = "testdbCTDataSet";
+            this.testdbCTDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // chiTieuBindingSource
+            // 
+            this.chiTieuBindingSource.DataMember = "ChiTieu";
+            this.chiTieuBindingSource.DataSource = this.testdbCTDataSet;
+            // 
+            // chiTieuTableAdapter
+            // 
+            this.chiTieuTableAdapter.ClearBeforeFill = true;
             // 
             // dateDataGridViewTextBoxColumn
             // 
@@ -301,65 +335,11 @@
             this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
             this.priceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // testTableBindingSource
-            // 
-            this.testTableBindingSource.DataMember = "TestTable";
-            this.testTableBindingSource.DataSource = this.testdbDataSet4;
-            // 
-            // testdbDataSet4
-            // 
-            this.testdbDataSet4.DataSetName = "TestdbDataSet4";
-            this.testdbDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // btSdb
-            // 
-            this.btSdb.Location = new System.Drawing.Point(0, 0);
-            this.btSdb.Margin = new System.Windows.Forms.Padding(4);
-            this.btSdb.Name = "btSdb";
-            this.btSdb.Size = new System.Drawing.Size(100, 28);
-            this.btSdb.TabIndex = 0;
-            // 
-            // testTableTableAdapter
-            // 
-            this.testTableTableAdapter.ClearBeforeFill = true;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Enabled = false;
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(336, 174);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(106, 22);
-            this.dateTimePicker2.TabIndex = 21;
-            // 
-            // dateTimePicker3
-            // 
-            this.dateTimePicker3.Enabled = false;
-            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker3.Location = new System.Drawing.Point(463, 174);
-            this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(106, 22);
-            this.dateTimePicker3.TabIndex = 22;
-            // 
-            // btLoc
-            // 
-            this.btLoc.Enabled = false;
-            this.btLoc.Location = new System.Drawing.Point(600, 168);
-            this.btLoc.Margin = new System.Windows.Forms.Padding(4);
-            this.btLoc.Name = "btLoc";
-            this.btLoc.Size = new System.Drawing.Size(100, 28);
-            this.btLoc.TabIndex = 23;
-            this.btLoc.Text = "&Lọc";
-            this.btLoc.UseVisualStyleBackColor = true;
-            this.btLoc.Click += new System.EventHandler(this.btLoc_Click);
-            // 
             // LietKeChiTieu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1334, 961);
+            this.ClientSize = new System.Drawing.Size(1000, 781);
             this.Controls.Add(this.btLoc);
             this.Controls.Add(this.dateTimePicker3);
             this.Controls.Add(this.dateTimePicker2);
@@ -381,14 +361,13 @@
             this.Controls.Add(this.tbHSX);
             this.Controls.Add(this.tbTH);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LietKeChiTieu";
             this.Text = "Liệt Kê Chi Tiêu";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nupG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.testTableBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.testdbDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testdbCTDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chiTieuBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -415,17 +394,17 @@
         private System.Windows.Forms.Label lbToi;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btSdb;
-        private TestdbDataSet4 testdbDataSet4;
-        private System.Windows.Forms.BindingSource testTableBindingSource;
-        private TestdbDataSet4TableAdapters.TestTableTableAdapter testTableTableAdapter;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.Button btLoc;
+        private testdbCTDataSet testdbCTDataSet;
+        private System.Windows.Forms.BindingSource chiTieuBindingSource;
+        private testdbCTDataSetTableAdapters.ChiTieuTableAdapter chiTieuTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn productDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn manufacturerDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn placeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private System.Windows.Forms.Button btLoc;
     }
 }
 

@@ -43,5 +43,27 @@ namespace WindowsFormsApp1.Properties {
                 return ((string)(this["testdbConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=mysql.c3r9um7vz9v5.us-east-1.rds.amazonaws.com,1433;Initial Catalog=t" +
+            "estdb;Persist Security Info=True;User ID=xdho;Password=lentus3012")]
+        public string testdbConnectionString2 {
+            get {
+                return ((string)(this["testdbConnectionString2"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=mysql.c3r9um7vz9v5.us-east-1.rds.amazonaws.com,1433;Initial Catalog=t" +
+            "estdb2;Persist Security Info=True;User ID=xdho;Password=lentus3012")]
+        public string testdb2ConnectionString {
+            get {
+                return ((string)(this["testdb2ConnectionString"]));
+            }
+        }
     }
 }

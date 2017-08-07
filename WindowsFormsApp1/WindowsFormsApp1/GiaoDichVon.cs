@@ -17,10 +17,7 @@ namespace WindowsFormsApp1
     public partial class GiaoDichVon : Form
     {
 
-        //string use to connect to server
-        //server explorer, datenverbindungen, Eigenschaften -> Verbindungszeichenfolge
-        private const string str = "Data Source=BIB-LHOX\\CONEXIO;Initial Catalog=Testdb;Integrated Security=True";
-
+        
         enum MenhGia { nothing = -1, euro, usd, vnd };
         enum LoaiGiaoDich { nothing = -1, them, thoai};
 
@@ -34,8 +31,9 @@ namespace WindowsFormsApp1
 
         private void GiaoDichVon_Load(object sender, EventArgs e)
         {
-            // TODO: Diese Codezeile lädt Daten in die Tabelle "gDV.GiaoDichVon". Sie können sie bei Bedarf verschieben oder entfernen.
-            this.giaoDichVonTableAdapter.Fill(this.GDV.GiaoDichVon);
+            // TODO: Diese Codezeile lädt Daten in die Tabelle "testdbGDVDataSet.GiaoDichVon". Sie können sie bei Bedarf verschieben oder entfernen.
+            this.giaoDichVonTableAdapter.Fill(this.testdbGDVDataSet.GiaoDichVon);
+
             cbLoaiGiaoDichVon.SelectedIndex = 0;
             cbMenhGia.SelectedIndex = 0;
             update_UI_GiaoDichVon();
@@ -92,7 +90,7 @@ namespace WindowsFormsApp1
             {
                 if(dgvGiaoDichVon.SelectedRows[0].Index != dgvGiaoDichVon.NewRowIndex)
                 {
-                    using (SqlConnection conn = new SqlConnection(str))
+                    using (SqlConnection conn = new SqlConnection(Global_Class.awsserver))
                     {
                         using (SqlCommand cmd = new SqlCommand())
                         {
@@ -135,7 +133,7 @@ namespace WindowsFormsApp1
 
         private void insert_gdv()
         {
-            using (SqlConnection conn = new SqlConnection(str))
+            using (SqlConnection conn = new SqlConnection(Global_Class.awsserver))
             {
                 using (SqlCommand cmd = new SqlCommand())
                 {
@@ -181,7 +179,7 @@ namespace WindowsFormsApp1
 
             decimal tkv = actual_tkv((MenhGia)cbMenhGia.SelectedIndex);          
 
-            using (SqlConnection conn = new SqlConnection(str))
+            using (SqlConnection conn = new SqlConnection(Global_Class.awsserver))
             {
                 using (SqlCommand cmd = new SqlCommand())
                 {
@@ -246,7 +244,7 @@ namespace WindowsFormsApp1
         private decimal actual_tkv(MenhGia lgd)
         {
 
-            using (SqlConnection conn = new SqlConnection(str))
+            using (SqlConnection conn = new SqlConnection(Global_Class.awsserver))
             {
                 using (SqlCommand cmd = new SqlCommand())
                 {
@@ -318,7 +316,7 @@ namespace WindowsFormsApp1
 
         private void update_datagridview()
         {
-            this.giaoDichVonTableAdapter.Fill(this.GDV.GiaoDichVon);
+            this.giaoDichVonTableAdapter.Fill(this.testdbGDVDataSet.GiaoDichVon);
         }
 
         //contain of the datagridview has been changed

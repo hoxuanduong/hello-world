@@ -49,5 +49,4 @@ C:\Users\XuanDuong.Ho\Desktop\Git hello world\hello-world\WindowsFormsApp1\Windo
 C:\Users\XuanDuong.Ho\Desktop\Git hello world\hello-world\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\de\WindowsFormsApp1.resources.dll
 C:\Users\XuanDuong.Ho\Desktop\Git hello world\hello-world\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\en\WindowsFormsApp1.resources.dll
 C:\Users\XuanDuong.Ho\Desktop\Git hello world\hello-world\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\vi\WindowsFormsApp1.resources.dll
-C:\Users\XuanDuong.Ho\Desktop\Git hello world\hello-world\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojResolveAssemblyReference.cache
 C:\Users\xuand\Documents\GitHub\hello-world\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojResolveAssemblyReference.cache

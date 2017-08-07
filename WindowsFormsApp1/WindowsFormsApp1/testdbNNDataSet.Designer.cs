@@ -435,7 +435,7 @@ namespace WindowsFormsApp1 {
                 base.Columns.Add(this.columnEnglish);
                 this.columnGerman = new global::System.Data.DataColumn("German", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnGerman);
-                this.columnID.MaxLength = 10;
+                this.columnID.MaxLength = 50;
                 this.columnVietnamese.MaxLength = 50;
                 this.columnEnglish.MaxLength = 50;
                 this.columnGerman.MaxLength = 50;
@@ -861,7 +861,7 @@ namespace WindowsFormsApp1.testdbNNDataSetTableAdapters {
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[NgonNgu] ([ID], [Vietnamese], [English], [German]) VALUES (@ID" +
                 ", @Vietnamese, @English, @German)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Vietnamese", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Vietnamese", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@English", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "English", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@German", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "German", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -871,7 +871,7 @@ namespace WindowsFormsApp1.testdbNNDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::WindowsFormsApp1.Properties.Settings.Default.testdbConnectionString1;
+            this._connection.ConnectionString = global::WindowsFormsApp1.Properties.Settings.Default.testdbConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

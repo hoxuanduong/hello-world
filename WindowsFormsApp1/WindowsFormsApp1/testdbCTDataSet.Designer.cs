@@ -20,17 +20,17 @@ namespace WindowsFormsApp1 {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("TestdbDataSet4")]
+    [global::System.Xml.Serialization.XmlRootAttribute("testdbCTDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class TestdbDataSet4 : global::System.Data.DataSet {
+    public partial class testdbCTDataSet : global::System.Data.DataSet {
         
-        private TestTableDataTable tableTestTable;
+        private ChiTieuDataTable tableChiTieu;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public TestdbDataSet4() {
+        public testdbCTDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace WindowsFormsApp1 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected TestdbDataSet4(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected testdbCTDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace WindowsFormsApp1 {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["TestTable"] != null)) {
-                    base.Tables.Add(new TestTableDataTable(ds.Tables["TestTable"]));
+                if ((ds.Tables["ChiTieu"] != null)) {
+                    base.Tables.Add(new ChiTieuDataTable(ds.Tables["ChiTieu"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace WindowsFormsApp1 {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public TestTableDataTable TestTable {
+        public ChiTieuDataTable ChiTieu {
             get {
-                return this.tableTestTable;
+                return this.tableChiTieu;
             }
         }
         
@@ -127,7 +127,7 @@ namespace WindowsFormsApp1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            TestdbDataSet4 cln = ((TestdbDataSet4)(base.Clone()));
+            testdbCTDataSet cln = ((testdbCTDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace WindowsFormsApp1 {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["TestTable"] != null)) {
-                    base.Tables.Add(new TestTableDataTable(ds.Tables["TestTable"]));
+                if ((ds.Tables["ChiTieu"] != null)) {
+                    base.Tables.Add(new ChiTieuDataTable(ds.Tables["ChiTieu"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace WindowsFormsApp1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableTestTable = ((TestTableDataTable)(base.Tables["TestTable"]));
+            this.tableChiTieu = ((ChiTieuDataTable)(base.Tables["ChiTieu"]));
             if ((initTable == true)) {
-                if ((this.tableTestTable != null)) {
-                    this.tableTestTable.InitVars();
+                if ((this.tableChiTieu != null)) {
+                    this.tableChiTieu.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace WindowsFormsApp1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "TestdbDataSet4";
+            this.DataSetName = "testdbCTDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/TestdbDataSet4.xsd";
+            this.Namespace = "http://tempuri.org/testdbCTDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableTestTable = new TestTableDataTable();
-            base.Tables.Add(this.tableTestTable);
+            this.tableChiTieu = new ChiTieuDataTable();
+            base.Tables.Add(this.tableChiTieu);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeTestTable() {
+        private bool ShouldSerializeChiTieu() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace WindowsFormsApp1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            TestdbDataSet4 ds = new TestdbDataSet4();
+            testdbCTDataSet ds = new testdbCTDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,14 +270,14 @@ namespace WindowsFormsApp1 {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void TestTableRowChangeEventHandler(object sender, TestTableRowChangeEvent e);
+        public delegate void ChiTieuRowChangeEventHandler(object sender, ChiTieuRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class TestTableDataTable : global::System.Data.TypedTableBase<TestTableRow> {
+        public partial class ChiTieuDataTable : global::System.Data.TypedTableBase<ChiTieuRow> {
             
             private global::System.Data.DataColumn columnDate;
             
@@ -291,8 +291,8 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TestTableDataTable() {
-                this.TableName = "TestTable";
+            public ChiTieuDataTable() {
+                this.TableName = "ChiTieu";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -300,7 +300,7 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal TestTableDataTable(global::System.Data.DataTable table) {
+            internal ChiTieuDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -317,7 +317,7 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected TestTableDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected ChiTieuDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -373,49 +373,49 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TestTableRow this[int index] {
+            public ChiTieuRow this[int index] {
                 get {
-                    return ((TestTableRow)(this.Rows[index]));
+                    return ((ChiTieuRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TestTableRowChangeEventHandler TestTableRowChanging;
+            public event ChiTieuRowChangeEventHandler ChiTieuRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TestTableRowChangeEventHandler TestTableRowChanged;
+            public event ChiTieuRowChangeEventHandler ChiTieuRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TestTableRowChangeEventHandler TestTableRowDeleting;
+            public event ChiTieuRowChangeEventHandler ChiTieuRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TestTableRowChangeEventHandler TestTableRowDeleted;
+            public event ChiTieuRowChangeEventHandler ChiTieuRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddTestTableRow(TestTableRow row) {
+            public void AddChiTieuRow(ChiTieuRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TestTableRow AddTestTableRow(System.DateTime Date, string Product, string Manufacturer, string Place, float Price) {
-                TestTableRow rowTestTableRow = ((TestTableRow)(this.NewRow()));
+            public ChiTieuRow AddChiTieuRow(System.DateTime Date, string Product, string Manufacturer, string Place, float Price) {
+                ChiTieuRow rowChiTieuRow = ((ChiTieuRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Date,
                         Product,
                         Manufacturer,
                         Place,
                         Price};
-                rowTestTableRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowTestTableRow);
-                return rowTestTableRow;
+                rowChiTieuRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowChiTieuRow);
+                return rowChiTieuRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                TestTableDataTable cln = ((TestTableDataTable)(base.Clone()));
+                ChiTieuDataTable cln = ((ChiTieuDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -423,7 +423,7 @@ namespace WindowsFormsApp1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new TestTableDataTable();
+                return new ChiTieuDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -456,28 +456,28 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TestTableRow NewTestTableRow() {
-                return ((TestTableRow)(this.NewRow()));
+            public ChiTieuRow NewChiTieuRow() {
+                return ((ChiTieuRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new TestTableRow(builder);
+                return new ChiTieuRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(TestTableRow);
+                return typeof(ChiTieuRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.TestTableRowChanged != null)) {
-                    this.TestTableRowChanged(this, new TestTableRowChangeEvent(((TestTableRow)(e.Row)), e.Action));
+                if ((this.ChiTieuRowChanged != null)) {
+                    this.ChiTieuRowChanged(this, new ChiTieuRowChangeEvent(((ChiTieuRow)(e.Row)), e.Action));
                 }
             }
             
@@ -485,8 +485,8 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.TestTableRowChanging != null)) {
-                    this.TestTableRowChanging(this, new TestTableRowChangeEvent(((TestTableRow)(e.Row)), e.Action));
+                if ((this.ChiTieuRowChanging != null)) {
+                    this.ChiTieuRowChanging(this, new ChiTieuRowChangeEvent(((ChiTieuRow)(e.Row)), e.Action));
                 }
             }
             
@@ -494,8 +494,8 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.TestTableRowDeleted != null)) {
-                    this.TestTableRowDeleted(this, new TestTableRowChangeEvent(((TestTableRow)(e.Row)), e.Action));
+                if ((this.ChiTieuRowDeleted != null)) {
+                    this.ChiTieuRowDeleted(this, new ChiTieuRowChangeEvent(((ChiTieuRow)(e.Row)), e.Action));
                 }
             }
             
@@ -503,14 +503,14 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.TestTableRowDeleting != null)) {
-                    this.TestTableRowDeleting(this, new TestTableRowChangeEvent(((TestTableRow)(e.Row)), e.Action));
+                if ((this.ChiTieuRowDeleting != null)) {
+                    this.ChiTieuRowDeleting(this, new ChiTieuRowChangeEvent(((ChiTieuRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveTestTableRow(TestTableRow row) {
+            public void RemoveChiTieuRow(ChiTieuRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -519,7 +519,7 @@ namespace WindowsFormsApp1 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                TestdbDataSet4 ds = new TestdbDataSet4();
+                testdbCTDataSet ds = new testdbCTDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -537,7 +537,7 @@ namespace WindowsFormsApp1 {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "TestTableDataTable";
+                attribute2.FixedValue = "ChiTieuDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -581,15 +581,15 @@ namespace WindowsFormsApp1 {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class TestTableRow : global::System.Data.DataRow {
+        public partial class ChiTieuRow : global::System.Data.DataRow {
             
-            private TestTableDataTable tableTestTable;
+            private ChiTieuDataTable tableChiTieu;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal TestTableRow(global::System.Data.DataRowBuilder rb) : 
+            internal ChiTieuRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableTestTable = ((TestTableDataTable)(this.Table));
+                this.tableChiTieu = ((ChiTieuDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -597,14 +597,14 @@ namespace WindowsFormsApp1 {
             public System.DateTime Date {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableTestTable.DateColumn]));
+                        return ((global::System.DateTime)(this[this.tableChiTieu.DateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte Date in Tabelle TestTable ist DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte Date in Tabelle ChiTieu ist DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTestTable.DateColumn] = value;
+                    this[this.tableChiTieu.DateColumn] = value;
                 }
             }
             
@@ -613,14 +613,14 @@ namespace WindowsFormsApp1 {
             public string Product {
                 get {
                     try {
-                        return ((string)(this[this.tableTestTable.ProductColumn]));
+                        return ((string)(this[this.tableChiTieu.ProductColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte Product in Tabelle TestTable ist DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte Product in Tabelle ChiTieu ist DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTestTable.ProductColumn] = value;
+                    this[this.tableChiTieu.ProductColumn] = value;
                 }
             }
             
@@ -629,14 +629,14 @@ namespace WindowsFormsApp1 {
             public string Manufacturer {
                 get {
                     try {
-                        return ((string)(this[this.tableTestTable.ManufacturerColumn]));
+                        return ((string)(this[this.tableChiTieu.ManufacturerColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte Manufacturer in Tabelle TestTable ist DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte Manufacturer in Tabelle ChiTieu ist DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTestTable.ManufacturerColumn] = value;
+                    this[this.tableChiTieu.ManufacturerColumn] = value;
                 }
             }
             
@@ -645,14 +645,14 @@ namespace WindowsFormsApp1 {
             public string Place {
                 get {
                     try {
-                        return ((string)(this[this.tableTestTable.PlaceColumn]));
+                        return ((string)(this[this.tableChiTieu.PlaceColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte Place in Tabelle TestTable ist DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte Place in Tabelle ChiTieu ist DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTestTable.PlaceColumn] = value;
+                    this[this.tableChiTieu.PlaceColumn] = value;
                 }
             }
             
@@ -661,75 +661,75 @@ namespace WindowsFormsApp1 {
             public float Price {
                 get {
                     try {
-                        return ((float)(this[this.tableTestTable.PriceColumn]));
+                        return ((float)(this[this.tableChiTieu.PriceColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte Price in Tabelle TestTable ist DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte Price in Tabelle ChiTieu ist DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTestTable.PriceColumn] = value;
+                    this[this.tableChiTieu.PriceColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsDateNull() {
-                return this.IsNull(this.tableTestTable.DateColumn);
+                return this.IsNull(this.tableChiTieu.DateColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDateNull() {
-                this[this.tableTestTable.DateColumn] = global::System.Convert.DBNull;
+                this[this.tableChiTieu.DateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsProductNull() {
-                return this.IsNull(this.tableTestTable.ProductColumn);
+                return this.IsNull(this.tableChiTieu.ProductColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetProductNull() {
-                this[this.tableTestTable.ProductColumn] = global::System.Convert.DBNull;
+                this[this.tableChiTieu.ProductColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsManufacturerNull() {
-                return this.IsNull(this.tableTestTable.ManufacturerColumn);
+                return this.IsNull(this.tableChiTieu.ManufacturerColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetManufacturerNull() {
-                this[this.tableTestTable.ManufacturerColumn] = global::System.Convert.DBNull;
+                this[this.tableChiTieu.ManufacturerColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsPlaceNull() {
-                return this.IsNull(this.tableTestTable.PlaceColumn);
+                return this.IsNull(this.tableChiTieu.PlaceColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetPlaceNull() {
-                this[this.tableTestTable.PlaceColumn] = global::System.Convert.DBNull;
+                this[this.tableChiTieu.PlaceColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsPriceNull() {
-                return this.IsNull(this.tableTestTable.PriceColumn);
+                return this.IsNull(this.tableChiTieu.PriceColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetPriceNull() {
-                this[this.tableTestTable.PriceColumn] = global::System.Convert.DBNull;
+                this[this.tableChiTieu.PriceColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -737,22 +737,22 @@ namespace WindowsFormsApp1 {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class TestTableRowChangeEvent : global::System.EventArgs {
+        public class ChiTieuRowChangeEvent : global::System.EventArgs {
             
-            private TestTableRow eventRow;
+            private ChiTieuRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TestTableRowChangeEvent(TestTableRow row, global::System.Data.DataRowAction action) {
+            public ChiTieuRowChangeEvent(ChiTieuRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TestTableRow Row {
+            public ChiTieuRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -768,7 +768,7 @@ namespace WindowsFormsApp1 {
         }
     }
 }
-namespace WindowsFormsApp1.TestdbDataSet4TableAdapters {
+namespace WindowsFormsApp1.testdbCTDataSetTableAdapters {
     
     
     /// <summary>
@@ -780,7 +780,7 @@ namespace WindowsFormsApp1.TestdbDataSet4TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class TestTableTableAdapter : global::System.ComponentModel.Component {
+    public partial class ChiTieuTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -794,7 +794,7 @@ namespace WindowsFormsApp1.TestdbDataSet4TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public TestTableTableAdapter() {
+        public ChiTieuTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -891,7 +891,7 @@ namespace WindowsFormsApp1.TestdbDataSet4TableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "TestTable";
+            tableMapping.DataSetTable = "ChiTieu";
             tableMapping.ColumnMappings.Add("Date", "Date");
             tableMapping.ColumnMappings.Add("Product", "Product");
             tableMapping.ColumnMappings.Add("Manufacturer", "Manufacturer");
@@ -900,8 +900,8 @@ namespace WindowsFormsApp1.TestdbDataSet4TableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[TestTable] ([Date], [Product], [Manufacturer], [Place], [Price" +
-                "]) VALUES (@Date, @Product, @Manufacturer, @Place, @Price)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[ChiTieu] ([Date], [Product], [Manufacturer], [Place], [Price])" +
+                " VALUES (@Date, @Product, @Manufacturer, @Place, @Price)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Product", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Product", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -914,7 +914,7 @@ namespace WindowsFormsApp1.TestdbDataSet4TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::WindowsFormsApp1.Properties.Settings.Default.TestdbConnectionString;
+            this._connection.ConnectionString = global::WindowsFormsApp1.Properties.Settings.Default.testdb2ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -923,7 +923,7 @@ namespace WindowsFormsApp1.TestdbDataSet4TableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Date, Product, Manufacturer, Place, Price FROM dbo.TestTable";
+            this._commandCollection[0].CommandText = "SELECT Date, Product, Manufacturer, Place, Price FROM dbo.ChiTieu";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -931,7 +931,7 @@ namespace WindowsFormsApp1.TestdbDataSet4TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(TestdbDataSet4.TestTableDataTable dataTable) {
+        public virtual int Fill(testdbCTDataSet.ChiTieuDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -944,9 +944,9 @@ namespace WindowsFormsApp1.TestdbDataSet4TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual TestdbDataSet4.TestTableDataTable GetData() {
+        public virtual testdbCTDataSet.ChiTieuDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            TestdbDataSet4.TestTableDataTable dataTable = new TestdbDataSet4.TestTableDataTable();
+            testdbCTDataSet.ChiTieuDataTable dataTable = new testdbCTDataSet.ChiTieuDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -954,15 +954,15 @@ namespace WindowsFormsApp1.TestdbDataSet4TableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(TestdbDataSet4.TestTableDataTable dataTable) {
+        public virtual int Update(testdbCTDataSet.ChiTieuDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(TestdbDataSet4 dataSet) {
-            return this.Adapter.Update(dataSet, "TestTable");
+        public virtual int Update(testdbCTDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "ChiTieu");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1044,7 +1044,7 @@ namespace WindowsFormsApp1.TestdbDataSet4TableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
-        private TestTableTableAdapter _testTableTableAdapter;
+        private ChiTieuTableAdapter _chiTieuTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1066,12 +1066,12 @@ namespace WindowsFormsApp1.TestdbDataSet4TableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public TestTableTableAdapter TestTableTableAdapter {
+        public ChiTieuTableAdapter ChiTieuTableAdapter {
             get {
-                return this._testTableTableAdapter;
+                return this._chiTieuTableAdapter;
             }
             set {
-                this._testTableTableAdapter = value;
+                this._chiTieuTableAdapter = value;
             }
         }
         
@@ -1094,9 +1094,9 @@ namespace WindowsFormsApp1.TestdbDataSet4TableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._testTableTableAdapter != null) 
-                            && (this._testTableTableAdapter.Connection != null))) {
-                    return this._testTableTableAdapter.Connection;
+                if (((this._chiTieuTableAdapter != null) 
+                            && (this._chiTieuTableAdapter.Connection != null))) {
+                    return this._chiTieuTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1111,7 +1111,7 @@ namespace WindowsFormsApp1.TestdbDataSet4TableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._testTableTableAdapter != null)) {
+                if ((this._chiTieuTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1123,14 +1123,14 @@ namespace WindowsFormsApp1.TestdbDataSet4TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(TestdbDataSet4 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(testdbCTDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._testTableTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.TestTable.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._chiTieuTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.ChiTieu.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._testTableTableAdapter.Update(updatedRows));
+                    result = (result + this._chiTieuTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1142,13 +1142,13 @@ namespace WindowsFormsApp1.TestdbDataSet4TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(TestdbDataSet4 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(testdbCTDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._testTableTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.TestTable.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._chiTieuTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.ChiTieu.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._testTableTableAdapter.Update(addedRows));
+                    result = (result + this._chiTieuTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1160,13 +1160,13 @@ namespace WindowsFormsApp1.TestdbDataSet4TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(TestdbDataSet4 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(testdbCTDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._testTableTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.TestTable.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._chiTieuTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.ChiTieu.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._testTableTableAdapter.Update(deletedRows));
+                    result = (result + this._chiTieuTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1202,15 +1202,15 @@ namespace WindowsFormsApp1.TestdbDataSet4TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(TestdbDataSet4 dataSet) {
+        public virtual int UpdateAll(testdbCTDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._testTableTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._testTableTableAdapter.Connection) == false))) {
+            if (((this._chiTieuTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._chiTieuTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("Für alle von einem TableAdapterManager verwalteten Instanzen von TableAdapter mus" +
                         "s die gleiche Verbindungszeichenfolge verwendet werden.");
             }
@@ -1248,13 +1248,13 @@ namespace WindowsFormsApp1.TestdbDataSet4TableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._testTableTableAdapter != null)) {
-                    revertConnections.Add(this._testTableTableAdapter, this._testTableTableAdapter.Connection);
-                    this._testTableTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._testTableTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._testTableTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._testTableTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._testTableTableAdapter.Adapter);
+                if ((this._chiTieuTableAdapter != null)) {
+                    revertConnections.Add(this._chiTieuTableAdapter, this._chiTieuTableAdapter.Connection);
+                    this._chiTieuTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._chiTieuTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._chiTieuTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._chiTieuTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._chiTieuTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1315,9 +1315,9 @@ namespace WindowsFormsApp1.TestdbDataSet4TableAdapters {
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._testTableTableAdapter != null)) {
-                    this._testTableTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._testTableTableAdapter]));
-                    this._testTableTableAdapter.Transaction = null;
+                if ((this._chiTieuTableAdapter != null)) {
+                    this._chiTieuTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._chiTieuTableAdapter]));
+                    this._chiTieuTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

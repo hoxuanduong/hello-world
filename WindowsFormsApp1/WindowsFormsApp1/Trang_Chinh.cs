@@ -49,7 +49,7 @@ namespace WindowsFormsApp1
 
         private void Main_Load(object sender, EventArgs e)
         {
-            //DuLieuNN dlnn = new DuLieuNN();
+            //DuLieuNN dlnn = new DuLieuNN(); //old dataset DuLieuNN, has been replaced by testdbNNDataSet
             //dlnn.ReadXml(String.Format("{0}/data.xml", Application.StartupPath));
             //CultureInfo ci = new CultureInfo("en-US");
             //Thread.CurrentThread.CurrentCulture = ci;

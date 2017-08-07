@@ -73,14 +73,6 @@
     <Compile Include="DauTu.Designer.cs">
       <DependentUpon>DauTu.cs</DependentUpon>
     </Compile>
-    <Compile Include="GDV.cs">
-      <DependentUpon>GDV.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="GDV.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GDV.xsd</DependentUpon>
-    </Compile>
     <Compile Include="GiaoDichVon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,10 +101,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>resources.vi.resx</DependentUpon>
     </Compile>
-    <Compile Include="TestdbDataSet4.Designer.cs">
+    <Compile Include="testdbCTDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>TestdbDataSet4.xsd</DependentUpon>
+      <DependentUpon>testdbCTDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="testdbGDVDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>testdbGDVDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="testdbNNDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -163,17 +160,6 @@
     <EmbeddedResource Include="Trang_Chinh.resx">
       <DependentUpon>Trang_Chinh.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="GDV.xsc">
-      <DependentUpon>GDV.xsd</DependentUpon>
-    </None>
-    <None Include="GDV.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>GDV.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="GDV.xss">
-      <DependentUpon>GDV.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -183,16 +169,27 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="TestdbDataSet4.xsc">
-      <DependentUpon>TestdbDataSet4.xsd</DependentUpon>
+    <None Include="testdbCTDataSet.xsc">
+      <DependentUpon>testdbCTDataSet.xsd</DependentUpon>
     </None>
-    <None Include="TestdbDataSet4.xsd">
+    <None Include="testdbCTDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TestdbDataSet4.Designer.cs</LastGenOutput>
+      <LastGenOutput>testdbCTDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="TestdbDataSet4.xss">
-      <DependentUpon>TestdbDataSet4.xsd</DependentUpon>
+    <None Include="testdbCTDataSet.xss">
+      <DependentUpon>testdbCTDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="testdbGDVDataSet.xsc">
+      <DependentUpon>testdbGDVDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="testdbGDVDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>testdbGDVDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="testdbGDVDataSet.xss">
+      <DependentUpon>testdbGDVDataSet.xsd</DependentUpon>
     </None>
     <None Include="testdbNNDataSet.xsc">
       <DependentUpon>testdbNNDataSet.xsd</DependentUpon>
